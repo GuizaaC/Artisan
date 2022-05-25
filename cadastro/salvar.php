@@ -24,7 +24,8 @@ if (!$connection) {
 
 $query = " INSERT INTO Cliente
 ( Email_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, Cpf_Cliente, Data_Nascimento_Cliente)
-VALUES('".$_POST["Email_Cliente"]."', '".$_POST["Nome_Cliente"]."', '".$_POST["Endereco_Cliente"]."','".$_POST["Telefone_Cliente"]."', '".$_POST["Cpf_Cliente"]."', '".$_POST["Data_Nascimento_Cliente"]."');";
+        VALUES('".$_POST["Email_Cliente"]."', '".$_POST["Nome_Cliente"]."', '".$_POST["Endereco_Cliente"]."','".$_POST["Telefone_Cliente"]."', 
+            '".$_POST["Cpf_Cliente"]."', '".$_POST["Data_Nascimento_Cliente"]."');";
 
 
 echo $query;
