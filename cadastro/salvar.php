@@ -51,7 +51,7 @@ echo "Connected successfully";
 
     }*/
 
-echo " Salvo Nome: ".$_POST["Nome_Cliente"]." cpf: ".$POST["Cpf_Cliente"] ;
+// echo " Salvo Nome: ".$_POST["Nome_Cliente"]." cpf: ".$POST["Cpf_Cliente"] ;
 
 
 ?>
