@@ -53,4 +53,9 @@ echo "Connected successfully";
 
 echo " Salvo Nome: ".$_POST["Nome_Cliente"]." cpf: ".$POST["Cpf_Cliente"] ;
 
+
 ?>
+
+<script>
+    window.location='./perfil_usuario/perfil.html';
+    </script>
