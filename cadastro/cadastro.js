@@ -33,5 +33,10 @@ function fnValidar(){
         document.getElementById("email_Cliente").focus();
      return false
     }
+    if (document.getElementById("senha_cliente").value==0){
+        alert("Campo senha é obrigatório");
+        document.getElementById("senha_cliente").focus();
+     return false
+    }
     document.getElementById("formSalvar").submit();
  }
