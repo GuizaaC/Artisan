@@ -38,12 +38,7 @@ while ($rowp = mysqli_fetch_array($resp)) {
 
 
 
-$connection = mysqli_connect($host,$user,$pass,$database) or die (mysql_errno().": ".mysql_error()."<BR>"); 
 
-mysqli_select_db($connection,$database);
-// where nome='".$nome."' and cpf='".$cpf."' and Telefone='".$Telefone."' and eMail='".$eMail."'"
-
-echo $query;
 
 
 
