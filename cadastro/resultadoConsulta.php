@@ -1,22 +1,8 @@
 <?php
-
-	$nome = htmlspecialchars($_GET['nome']);
-
-	$cpf = htmlspecialchars($_GET['cpf']);
-
-	$Telefone = htmlspecialchars($_GET['Telefone']);
-
-	$eMail = htmlspecialchars($_GET['eMail']);
-
-
-
-$host = "localhost"; 
-
-$user = "id17969856_cerimoni_bd"; 
-
-$pass = "xxxxxxx"; 
-
-$dbname = "id17969856_cerimoni_agilesystems";
+	$servername = "localhost";
+	$database = "u553234134_Artisan";
+	$username = "u553234134_Gizaac";
+	$password = "Gizaac12343124";
 
 $connection = mysqli_connect($host,$user,$pass,$dbname) or die (mysql_errno().": ".mysql_error()."<BR>"); 
 
