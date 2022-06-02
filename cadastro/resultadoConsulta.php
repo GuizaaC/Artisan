@@ -8,11 +8,12 @@ $connection = mysqli_connect($host,$user,$pass,$dbname) or die (mysql_errno().":
 
 mysqli_select_db($connection,$dbname);
 
-echo "chegou aqui3";
-/*	
+
+	
 
 $query = " select Id_Cliente from Cliente ";
-
+echo "chegou aqui3";
+/*
 // where nome='".$nome."' and cpf='".$cpf."' and Telefone='".$Telefone."' and eMail='".$eMail."'"
 
 echo $query;
