@@ -1,16 +1,16 @@
 mensagem.
 <?php
-	$servername = "localhost";
+$servername = "localhost";
 	$database = "u553234134_Artisan";
 	$username = "u553234134_Gizaac";
 	$password = "Gizaac12343124";
-	echo "chegou aqui2";
-	/*
+
 $connection = mysqli_connect($host,$user,$pass,$dbname) or die (mysql_errno().": ".mysql_error()."<BR>"); 
 
 //mysqli_select_db($connection,$dbname);
 
-
+echo "chegou aqui3";
+/*	
 
 $query = " select Id_Cliente from Cliente ";
 
