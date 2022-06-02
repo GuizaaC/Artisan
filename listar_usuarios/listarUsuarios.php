@@ -1,15 +1,31 @@
 <?php
-try {
-  $pdo = new PDO('mysql:host=localhost;dbname=meuBancoDeDados', $username, $password);
-  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	$servername = "localhost";
+	$database = "u553234134_Artisan";
+	$username = "u553234134_Gizaac";
+	$password = "Gizaac12343124";
+// Create connection
+	$connection = mysqli_connect($servername, $username, $password, $database);
+// Check connection
+	if (!$connection) {
+		die("Connection failed: " . mysqli_connect_error());
+	}
 
-  $stmt = $pdo->prepare('INSERT INTO minhaTabela (nome) VALUES(:nome)');
-  $stmt->execute(array(
-    ':nome' => 'Ricardo Arrigoni'
-  ));
 
-  echo $stmt->rowCount();
-} catch(PDOException $e) {
-  echo 'Error: ' . $e->getMessage();
-}
-   ?>
+	$query = " select Id_Cliente from Cliente ";
+
+	echo $query;
+	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
+
+	while ($rowp = mysqli_fetch_array($resp)) {							
+
+							
+	//{"Id_Cliente":"1"}
+												//buscando do campo do banco de dados DT_DE_ALTERACAO.
+	
+												
+	
+	echo "<BR/><a href='cadastro.php?Id_Cliente=".$rowp["Id_Cliente"]."'>".$rowp["Id_Cliente"]."</a> ";
+	};
+
+//mysqli_select_db($connection,$database);
+?>
