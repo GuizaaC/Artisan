@@ -21,11 +21,22 @@ $query = " select Id_Cliente from Cliente ";
 
 
 echo $query;
-mysqli_query($connection,$query) or die ('Erro ao consultar..');
-echo "Salvo com sucesso";
-	
+$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
-echo "chegou aqui3";
+while ($rowp = mysqli_fetch_array($resp)) {							
+
+							
+	//{"Id_Cliente":"1"}
+												//buscando do campo do banco de dados DT_DE_ALTERACAO.
+	
+												
+	
+													echo "<BR/><a href='cadastro.php?Id_Cliente=".$rowp["Id_Cliente"]."'>ALTERAR ID".$rowp["Id_Cliente"]."</a> ";
+							};
+
+//mysqli_select_db($connection,$database);
+
+echo "chegou aqui4";
 /*
 $connection = mysqli_connect($host,$user,$pass,$dbname) or die (mysql_errno().": ".mysql_error()."<BR>"); 
 
