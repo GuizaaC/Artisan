@@ -1,16 +1,18 @@
+mensagem.
 <?php
 	$servername = "localhost";
 	$database = "u553234134_Artisan";
 	$username = "u553234134_Gizaac";
 	$password = "Gizaac12343124";
-
+	echo "chegou aqui2";
+	/*
 $connection = mysqli_connect($host,$user,$pass,$dbname) or die (mysql_errno().": ".mysql_error()."<BR>"); 
 
 //mysqli_select_db($connection,$dbname);
 
 
 
-$query = " select Id_Cliente from Cliente";
+$query = " select Id_Cliente from Cliente ";
 
 // where nome='".$nome."' and cpf='".$cpf."' and Telefone='".$Telefone."' and eMail='".$eMail."'"
 
@@ -33,20 +35,7 @@ $resp= mysqli_query ($connection,$query) or die ('Erro ao salvar');
 											
 
 												echo "<BR/><a href='cadastro.php?Id_Cliente=".$rowp["Id_Cliente"]."'>ALTERAR ID".$rowp["Id_Cliente"]."</a> ";
-
-										
-
-						
-
 						}
-
-
-
-
-
-
-
-
-
+						*/
 ?>
 
