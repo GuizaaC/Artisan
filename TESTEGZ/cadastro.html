@@ -11,20 +11,20 @@
 <body>
 
     <header class="topo"><img src="../assets/Logo.png" alt="Logo" class="logo">
-        <a href="../perfil.html">
+        <a href="../index.html">
             <button class="voltar">Voltar</button>
         </a>
     </header>
     
 <br> <br><br>
     <div class="container">
-<form id="formSalvar" action='update.php' method="GET" onsubmit>
+<form id="formSalvar" action='salvar.php' method="POST" onsubmit>
     <!-- Campo nome -->
     <label class="titulo">Nome</label> <br>  
         <input class="entrada" name='Nome_Cliente' id="Nome_Cliente" placeholder="Nome" required> <br>
     <!-- Campo Endereço -->
     <label class="titulo">Endereço</label> <br>
-        <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente" placeholder="Endereço" required>  <br>
+        <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente" value="<?php echo $_POST["Id_Cliente"]; ?> required>  <br>
     <!-- Campo Telefone -->
     <label class="titulo">Telefone</label> <br>
         <input class="entrada" type="tel" max="11"name='Telefone_Cliente' id="Telefone_Cliente" placeholder="(00)90000-0000" required> <br>
@@ -40,11 +40,13 @@
     <!-- Campo senha -->
     <label class="titulo">Senha</label>
         <input class="entrada" type="password" min="5" max="10" name="Senha_Cliente" id="senha_cliente" placeholder="Senha" required><br>
+        <input class="entrada" type="hidden" name="Id_Cliente" id="id_cliente" value="<?php echo $_POST["Id_Cliente"]; ?>"><br>
         
 
 <input class="enviar" type=button value="Enviar" onclick="fnValidar();">
 
+<a href="resultadoConsulta.php">listar Clientes</a>
 </form> 
- <script src="/cadastro/atualizar.js"></script>
+ <script src="/cadastro/cadastro.js"></script>
 </body>
 </html>
