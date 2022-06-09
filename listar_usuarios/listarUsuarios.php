@@ -11,20 +11,23 @@
 	}
 
 
-	$query = " select Id_Cliente from Cliente ";
+	$query = " select Id_Cliente, Nome_Cliente from Cliente ";
 
 	echo $query;
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
-	while ($rowp = mysqli_fetch_array($resp)) {							
+	while ($rowp = mysqli_fetch_array($resp)) {		?>					
 
 							
-	//{"Id_Cliente":"1"}
-												//buscando do campo do banco de dados DT_DE_ALTERACAO.
+
 	
 												
 	
-	echo "<BR/><a href='cadastro.php?Id_Cliente=".$rowp["Id_Cliente"]."'>".$rowp["Id_Cliente"]."</a> ";
+<BR/><a href='update.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'>Alterar usuário<img src='img.jpg'></a>  <?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?><br> <br> 
+	
+	
+	
+	<?php 
 	};
 
 //mysqli_select_db($connection,$database);
