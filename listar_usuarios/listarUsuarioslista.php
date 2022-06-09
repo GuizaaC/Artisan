@@ -33,7 +33,7 @@
         <input class="entrada" type="email" max="70" name='Email_Cliente' id="email_Cliente" placeholder="Email" required> <br>
     <label class="titulo">Senha</label>
         <input class="entrada" type="password" min="5" max="10" name="Senha_Cliente" id="senha_cliente" placeholder="Senha" required><br>
-        <input class="entrada" type="hidden" name="Id_Cliente" id="id_cliente" value="<?php echo $_POST["Id_Cliente"];" ?>"><br>
+    <input class="entrada" type="hidden" name="Id_Cliente" id="Id_Cliente" value="<?php echo $_POST["Id_Cliente"]; ?>"><br>
         
 
 <input class="enviar" type=button value="Enviar" onclick="fnValidar();">

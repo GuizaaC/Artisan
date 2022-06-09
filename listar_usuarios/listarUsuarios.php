@@ -11,7 +11,7 @@
 	}
 
 
-	$query = " select Id_Cliente, Nome_Cliente from Cliente ";
+	// $query = " select Id_Cliente, Nome_Cliente from Cliente ";
 
 	echo $query;
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
