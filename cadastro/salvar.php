@@ -26,5 +26,5 @@
 
 
     <script>
-        window.location='../perfil_usuario/perfil.html';
+        window.location='../perfil_usuario/perfil.php';
     </script>
