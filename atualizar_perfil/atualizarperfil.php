@@ -11,7 +11,7 @@
 <body>
 
     <header class="topo"><img src="../assets/Logo.png" alt="Logo" class="logo">
-        <a href="../perfil.html">
+        <a href="../index.html">
             <button class="voltar">Voltar</button>
         </a>
     </header>
@@ -24,28 +24,27 @@
 
 // Create connection
 	$connection = mysqli_connect($servername, $username, $password, $database);
-	if (!$connection) {
-		die("Connection failed: " . mysqli_connect_error());
-	}
+        if (!$connection) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
 	//seleção de campos
-	$query = " select Id_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, CPF_Cliente, Data_Nascimento_Cliente, Email_Cliente, Senha_Cliente from Cliente Where Id_Cliente = ".$_GET("Id_Cliente");
-	echo $query;
+	$query = " select Id_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, CPF_Cliente, Data_Nascimento_Cliente, Email_Cliente, Senha_Cliente from 
+    Cliente Where Id_Cliente = ".$_GET["Id_Cliente"];
+	    echo $query;
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
 	while ($rowp = mysqli_fetch_array($resp)) {	
 
-
-	
 ?>
 
 
 <br> <br><br>
     <div class="container">
 <form id="formSalvar" action='update.php' method="GET" onsubmit>
-    <!-- Campo nome -->
+        <!-- Campo nome -->
     <label class="titulo">Nome</label> <br>  
         <input class="entrada" name='Nome_Cliente' id="Nome_Cliente_Atualizado" placeholder="Nome" value="<?php echo $rowp["Nome_Cliente"]; ?>" required> <br>
-    <!-- Campo Endereço -->
+        <!-- Campo Endereço -->
     <label class="titulo">Endereço</label> <br>
         <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente_Atualizado" placeholder="Endereço" value="<?php echo $rowp["Endereco_Cliente"]; ?>" required>  <br>
     <!-- Campo Telefone -->
@@ -65,9 +64,9 @@
         <input class="entrada" type="password" min="5" max="10" name="Senha_Cliente" id="Senha_cliente_Atualizado" placeholder="Senha" value="<?php echo $rowp["Senha_Cliente"]; ?>" required><br>
     <input class="entrada" type="hidden" name="Id_Cliente" id="Id_Cliente" value="<?php echo $_POST["Id_Cliente"]; ?>"><br>
     <?php      
-  };
-?>
-<input class="enviar" type=button value="Atualizar" onclick="fnValidar();">
+    };
+    ?>
+    <input class="enviar" type=button value="Atualizar" onclick="fnValidar();">
 
 </form> 
  <script src="/atualizar_perfil/atualizar.js"></script>
