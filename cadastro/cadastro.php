@@ -46,7 +46,7 @@
 
 <input class="enviar" type=button value="Enviar" onclick="fnValidar();">
 
-<a href="../listar_usuarios/listar_usuarios.php">listar Clientes</a>
+<a href="../listar_usuarios/listarUsuarios.php">listar Clientes</a>
 </form> 
  <script src="/cadastro/cadastro.js"></script>
 </body>
