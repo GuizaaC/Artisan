@@ -21,7 +21,7 @@
 <form id="formSalvar" action='salvar.php' method="POST" onsubmit>
     <!-- Campo nome -->
     <label class="titulo">Nome</label> <br>  
-        <input class="entrada" name='Nome_Cliente' id="Nome_Cliente" value="["Endereco_Cliente"]; ?>" <br>
+        <input class="entrada" name='Nome_Cliente' id="Nome_Cliente" value="asdasd"> <br>
     <!-- Campo Endereço -->
     <label class="titulo">Endereço</label> <br>
         <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente" value="<?php echo $_POST["Endereco_Cliente"]; ?>" >  <br>
@@ -40,7 +40,8 @@
     <!-- Campo senha -->
     <label class="titulo">Senha</label>
         <input class="entrada" type="password" min="5" max="10" name="Senha_Cliente" id="senha_cliente" placeholder="Senha" required><br>
-        <input class="entrada" type="hidden" name="Id_Cliente" id="id_cliente" value="<?php echo $_POST["Id_Cliente"]; ?>"><br>
+        <input class="entrada" type="hidden" name="Id_Cliente" id="id_cliente" value="<?php echo $_POST["Id_Cliente"]; ?>
+        <br>
         
 
 <input class="enviar" type=button value="Enviar" onclick="fnValidar();">

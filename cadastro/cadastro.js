@@ -38,5 +38,6 @@ function fnValidar(){
         document.getElementById("senha_cliente").focus();
      return false
     }
+    
     document.getElementById("formSalvar").submit();
  }
