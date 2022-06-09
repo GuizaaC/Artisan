@@ -17,16 +17,20 @@
             <a href="./login/login.html">
                 <button class="login">Entrar</button>
             </a>
-            <li>Perfil
-                <ul>
-                    <li><a href="../atualizar_perfil/atualizarperfil.php"> dados do cadastro</a></li>
-                    <li><a href="#">Deletar perfil</a></li>
-                </ul>
-            </li>
+            
 
             
     </header>
     
+
+    <li>Perfil
+        <ul>
+            <li><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $_SESSION["Id_Cliente"];  ?>'> Alterar dados do cadastro</a></li>
+            <li><a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $_SESSION["Id_Cliente"];  ?>'>Deletar perfil</a></li>
+        </ul>
+    </li>
+
+
     <div class="corpo-esq">
         asdasdasdsad
     </div>
