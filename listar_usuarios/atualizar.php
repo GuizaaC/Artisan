@@ -22,7 +22,7 @@
     <label class="titulo">Nome</label> <br>
         <input class="entrada" name='Nome_Cliente' id="Nome_Cliente" placeholder="Nome" required> <br>
     <label class="titulo">Endereço</label> <br>
-        <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente" placeholder="Endereço" required>  <br>
+        <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente" value="" required>  <br>
     <label class="titulo">Telefone</label> <br>
         <input class="entrada" type="tel" max="11"name='Telefone_Cliente' id="Telefone_Cliente" placeholder="(00)90000-0000" required> <br>
     <label class="titulo">CPF</label> <br>

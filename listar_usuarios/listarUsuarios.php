@@ -23,7 +23,7 @@
 	
 												
 	
-<BR/><a href='../cadastro/cadastro.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>Alterar Usuario</button></a>  <?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?><br> <br> 
+<BR/><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>Alterar Usuario</button></a>  <?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?><br> <br> 
 	
 	
 	
