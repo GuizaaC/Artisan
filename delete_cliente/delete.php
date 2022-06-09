@@ -12,11 +12,11 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$query = " DELETE FROM Cliente WHERE  Id_Cliente = '".$_POST["Id_Cliente"]."' ";
+$query = " DELETE FROM Cliente WHERE  Id_Cliente = '".$_GET["Id_Cliente"]."' ";
 
 echo $query;
-mysqli_query($connection,$query) or die ('Erro ao salvar..');
-echo "Salvo com sucesso";
+mysqli_query($connection,$query) or die ('Erro ao Deletar..');
+echo "Deletado com sucesso";
 ?>
 
 <script>
