@@ -40,11 +40,13 @@
     <!-- Campo senha -->
     <label class="titulo">Senha</label>
         <input class="entrada" type="password" min="5" max="10" name="Senha_Cliente" id="senha_cliente" placeholder="Senha" required><br>
+
+        
         
 
 <input class="enviar" type=button value="Enviar" onclick="fnValidar();">
 
-<a href="resultadoConsulta.php">listar Clientes</a>
+<a href="../listar_usuarios/listar_usuarios.php">listar Clientes</a>
 </form> 
  <script src="/cadastro/cadastro.js"></script>
 </body>
