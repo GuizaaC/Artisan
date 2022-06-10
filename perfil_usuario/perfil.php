@@ -12,7 +12,7 @@
 <body>
     <link rel="icon" href="../assets/Logo.png">
     <header 
-            class="topo"><img src="./assets/Logo.png" alt="Logo" class="logo">
+            class="topo"><img src="../assets/Logo.png" alt="Logo" class="logo">
 
             <a href="./login/login.html">
                 <button class="login">Entrar</button>
