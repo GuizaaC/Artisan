@@ -15,9 +15,7 @@
     padding: 20px;
     align-items: center;
     margin-bottom: 10px;
-}
-
-/* body */
+}/* body */
 body{
     background-image: url(../assets/Folhas.jpg);
     background-position: center;
@@ -44,7 +42,7 @@ body{
 /* center container */
 .container{
     font-family: Arial, Helvetica, sans-serif;
-    max-width: 400px;
+    max-width: 300px;
     margin: auto;
     background-color: aliceblue;
     padding: 20px;
