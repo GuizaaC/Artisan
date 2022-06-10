@@ -108,62 +108,57 @@ body{
    }
 /* Container principal */
 .container {
-    
-        backdrop-filter: blur(2px) saturate(59%);
-        -webkit-backdrop-filter: blur(2px) saturate(59%);
-        background-color: rgba(255, 255, 255, 0.4);
-        border-radius: 12px;
-        border: 1px solid rgba(209, 213, 219, 0.3);
-        position: inherit;
-        text-transform: lowercase;
-    
+    backdrop-filter: blur(2px) saturate(59%);
+    -webkit-backdrop-filter: blur(2px) saturate(59%);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    position: inherit;
+    text-transform: lowercase;
 }
 
 /*Estilo dos Inputs*/
 .entrada{
     position: relative;
-        font-size: 12px;
-        text-decoration: none;
-        padding: 1em 2.5em;
-        display: inline-block;
-        border-radius: 6em;
-        transition: all .2s;
-        border: none;
-        font-family: inherit;
-        font-weight: 500;
-        color: black;
-        background-color: white;
-        fonT;
+    font-size: 12px;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
 }
     /* Animação dos imputs */
    .entrada:hover {
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
    }
-   
    .entrada:active {
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
    }
-   
    .entrada::after {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        width: 100%;
-        border-radius: 100px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        transition: all .4s;
-        background-color: #fff;
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    background-color: #fff;
    }
-   
    .entrada:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
    }
+
    /* Logo */
    .titulo{
        color: white;
@@ -173,6 +168,7 @@ body{
    .cadastrar{
        color: white;
    }
+
    /* Link do cadastro */
    #fazerCadastro{
        color: rgb(185, 183, 183);
