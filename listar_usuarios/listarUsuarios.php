@@ -9,45 +9,44 @@
 </head>
 
 <body>
-
+	<!-- cabeçalho -->
     <header class="topo">
 
         <a href="../index.html">
 			<img src="../assets/Logo.png" alt="Logo" class="logo">
         </a>
-		
+
     </header>
     
 <br> <br><br>
     <div class="container">
     
-	
+	<!-- informações do banco de dados -->
 <?php
 	$servername = "localhost";
 	$database = "u553234134_Artisan";
 	$username = "u553234134_Gizaac";
 	$password = "Gizaac12343124";
-// Create connection
+
+// criando a conexão
 	$connection = mysqli_connect($servername, $username, $password, $database);
-// Check connection
+
+// checando a conexão
 	if (!$connection) {
 		die("Connection failed: " . mysqli_connect_error());
 	}
 
-
+	//selecionando os campos do banco
 	$query = ' select Id_Cliente, Nome_Cliente from Cliente ';
 
 	echo $query;
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
 	while ($rowp = mysqli_fetch_array($resp)) {		?>					
-
-							
-
 	
-												
+	<!-- lista desordenada dos usuarios -->
 	<UL>
-		<li>
+		<li class="lista ">
 		<?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?>
 		<a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Editar<label/></a> 
 		<a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Deletar<label/></a> </li><br> <br> 
