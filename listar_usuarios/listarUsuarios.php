@@ -44,11 +44,12 @@
 
 	
 												
-	<OL>
-		<li><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Editar<label/></a> 
-		<a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Deletar<label/></a> 
-		<?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?></li><br> <br> 
-	</OL>
+	<UL>
+		<li>
+		<?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?>
+		<a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Editar<label/></a> 
+		<a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Deletar<label/></a> </li><br> <br> 
+	</UL>
 	
 
 	<?php 
