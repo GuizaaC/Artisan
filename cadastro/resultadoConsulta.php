@@ -1,11 +1,11 @@
 <?php
-//DB Info
+//Informações do banco
 	$servername = "localhost";
 	$database = "u553234134_Artisan";
 	$username = "u553234134_Gizaac";
 	$password = "Gizaac12343124";
 
-// Create connection
+//Criação da conexão
 	$connection = mysqli_connect($servername, $username, $password, $database);
 <<<<<<< HEAD
 	// Check connection
