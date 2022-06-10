@@ -1,7 +1,6 @@
 /* Header */
 .topo{
     font-family: Arial, Helvetica, sans-serif;
-
     align-items: center;
     background-color: grey;
     display: flex;
@@ -16,7 +15,6 @@
     align-items: center;
     margin-bottom: 10px;
 }
-/* logomarca */
 .logo{
     height: 50px;
     position: center;
