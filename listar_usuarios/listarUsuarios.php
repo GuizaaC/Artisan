@@ -16,44 +16,41 @@
         </a>
     </header>
     
-<br> <br><br>
     <div class="container">
-    
-	
-<?php
-	$servername = "localhost";
-	$database = "u553234134_Artisan";
-	$username = "u553234134_Gizaac";
-	$password = "Gizaac12343124";
-// Create connection
-	$connection = mysqli_connect($servername, $username, $password, $database);
-// Check connection
-	if (!$connection) {
-		die("Connection failed: " . mysqli_connect_error());
-	}
+		<?php
+		$servername = "localhost";
+		$database = "u553234134_Artisan";
+		$username = "u553234134_Gizaac";
+		$password = "Gizaac12343124";
+		// Create connection
+		$connection = mysqli_connect($servername, $username, $password, $database);
+
+		// Check connection
+		if (!$connection) {
+			die("Connection failed: " . mysqli_connect_error());
+		}
 
 
-	$query = " select Id_Cliente, Nome_Cliente from Cliente ";<br>
+		$query = " select Id_Cliente, Nome_Cliente from Cliente ";<br>
 
-	echo $query;
-	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
+		echo $query;
+		$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
-	while ($rowp = mysqli_fetch_array($resp)) {		?>	<br>				
+		while ($rowp = mysqli_fetch_array($resp)) {		?>	<br>				
 
-																	
-	<div class="container">
-		<BR/><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>Editar</button></a> 
-		<a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>Deletar</button></a> 
-		<?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?><br> <br> 
-	</div>
-	
+																		
+		<div class="container">
+			<BR/><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>Editar</button></a> 
+			<a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>Deletar</button></a> 
+			<?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?><br> <br> 
+		</div>
+		
 
-	<?php 
-	};
-?>
-    </form> 
- <script src="/cadastro/cadastro.js"></script>
-</body>
+		<?php 
+		};
+		?>
+
+	</body>
 </html>
 
 
