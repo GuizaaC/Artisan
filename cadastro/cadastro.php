@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet"  media="(min-width: 601px)" href="cadastro.css">
+    <link rel="stylesheet" media="(max-width: 600px)" href="cadastromedia.css" />
     <title>Cadastro</title>
 </head>
 
@@ -42,7 +43,7 @@
         <label class="titulo">Senha</label>
             <input class="entrada" type="password" min="5" max="10" name="Senha_Cliente" id="senha_cliente" placeholder="Senha" required><br>
 
-
+        <!-- Validação -->
         <input class="enviar" type=button value="Enviar" onclick="fnValidar();">
     </form> 
  <script src="/cadastro/cadastro.js"></script>
