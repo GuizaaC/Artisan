@@ -17,12 +17,11 @@
             <a href="./login/login.html">
                 <button class="login">Entrar</button>
             </a>
-            
 
-            
     </header>
     
-
+    <div class="corpo-esq">
+        
     <li>Perfil
         <ul>
             <li><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $_SESSION["Id_Cliente"];  ?>'> Alterar dados do cadastro</a></li>
@@ -31,13 +30,10 @@
         </ul>
     </li>
 
-
-    <div class="corpo-esq">
-        asdasdasdsad
     </div>
 
     <div class="corpo-dir">
-        asdasdasdsad
+        aside
     </div>
 
     <footer>
