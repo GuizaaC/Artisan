@@ -75,22 +75,3 @@ echo "Salvo com sucesso";
 <script>
     window.location='../perfil_usuario/perfil.html';
 </script>
-=======
-$sql = "UPDATE Cliente SET '".$_GET["Email_Cliente_Atualizado"]."', '".$_GET["Nome_Cliente_Atualizado"]."', 
->>>>>>> 3eb519c848ac06ec81516e24b8b2eeb26a4f1864
-'".$_GET["Endereco_Cliente_Atualizado"]."','".$_GET["Telefone_Cliente_Atualizado"]."', 
-'".$_GET["CPF_Cliente_Atualizado"]."', '".$_GET["Data_Cliente_Atualizado"]."',
-'".$_GET["Senha_cliente_Atualizado"]"'); WHERE Id_Cliente=""";
-
-if ($conn->query($sql) === TRUE) {
-  echo "Atualização dos dados feita com sucesso";
-} else {
-  echo "Erro ao atualizar: " . $conn->error;
-}
-
-$conn->close();
-?>
-<script>
-    window.location='../perfil_usuario/perfil.html';
-</script>
->>>>>>> edc593b6e929a128490a4a4d5ee8451823ed3f46
