@@ -20,5 +20,5 @@ echo "Deletado com sucesso";
 ?>
 
 <script>
-    window.location='../home/home.html';
+    window.location='../index.html';
 </script>
