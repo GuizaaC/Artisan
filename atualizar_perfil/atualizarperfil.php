@@ -16,13 +16,13 @@
         </a>
     </header>
     <?php
-//DB Info
+//Informações do banco de dados
 	$servername = "localhost";
 	$database = "u553234134_Artisan";
 	$username = "u553234134_Gizaac";
 	$password = "Gizaac12343124";
 
-// Create connection
+// Criação de conexão
 	$connection = mysqli_connect($servername, $username, $password, $database);
         if (!$connection) {
             die("Connection failed: " . mysqli_connect_error());

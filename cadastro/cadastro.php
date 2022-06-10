@@ -10,9 +10,10 @@
 
 <body>
 
-    <header class="topo"><img src="../assets/Logo.png" alt="Logo" class="logo">
+    <header class="topo">
         <a href="../index.html">
             <button class="voltar">Voltar</button>
+            <img src="../assets/Logo.png" alt="Logo" class="logo">
         </a>
     </header>
     
