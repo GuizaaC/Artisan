@@ -103,10 +103,12 @@ footer{
     .corpo-esq{
        width: 100%;
        order: 0;
+       height: 200px;
     }
 
     .corpo-dir{
         width: 100%;
         order: 1;
+        height: 200px;
     }
 }
