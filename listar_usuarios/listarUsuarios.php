@@ -33,30 +33,24 @@
 	}
 
 
-	$query = " select Id_Cliente, Nome_Cliente from Cliente ";
+	$query = " select Id_Cliente, Nome_Cliente from Cliente ";<br>
 
 	echo $query;
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
-	while ($rowp = mysqli_fetch_array($resp)) {		?>					
+	while ($rowp = mysqli_fetch_array($resp)) {		?>	<br>				
 
-							
-
-	
-												
+																	
 	<div class="container">
-		<BR/><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>Alterar Usuario</button></a> 
-		<a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>deletar Usuario</button></a> 
+		<BR/><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>Editar</button></a> 
+		<a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><button>Deletar</button></a> 
 		<?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?><br> <br> 
 	</div>
 	
 
 	<?php 
 	};
-
-//mysqli_select_db($connection,$database);
 ?>
-
     </form> 
  <script src="/cadastro/cadastro.js"></script>
 </body>
