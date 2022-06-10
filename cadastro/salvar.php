@@ -5,10 +5,10 @@
     $username = "u553234134_Gizaac";
     $password = "Gizaac12343124";
 
-// Create connection
+// Criação de conexão
     $connection = mysqli_connect($servername, $username, $password, $database);
 
-// Check connection
+// Checagem de conexão
     if (!$connection) {
         die("Connection failed: " . mysqli_connect_error());
     }
