@@ -30,7 +30,7 @@
         }
 	//seleção de campos
 	$query = " select Id_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, CPF_Cliente, Data_Nascimento_Cliente, Email_Cliente, Senha_Cliente from 
-    Cliente Where Email_Cliente = '".$_GET["Email_Cliente"]."' and Senha_Cliente = '".$_GET["Senha_Cliente"]."'" ;
+    Cliente Where Email_Cliente = '".$_POST["Email_Cliente"]."' and Senha_Cliente = '".$_POST["Senha_Cliente"]."'" ;
 	    echo $query;
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
     $_SESSION["logado"]=  "nao";
