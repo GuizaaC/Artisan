@@ -38,5 +38,5 @@ function fnAtualizar(){
         document.getElementById("Senha_cliente_Atualizado").focus();
      return false
     }
-    document.getElementById("formSalvar").submit();
+    document.getElementById("formSalvarAtualizar").submit();
  }

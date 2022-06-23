@@ -54,7 +54,7 @@ if ( $_SESSION["logado"] != "sim"){
 
 <br> <br><br>
     <div class="container">
-<form id="formSalvar" action='update.php' method="GET" onsubmit>
+<form id="formSalvarAtualizar" action='update.php' method="GET" onsubmit>
         <!-- Campo nome -->
     <label class="titulo">Nome</label> <br>  
         <input class="entrada" name='Nome_Cliente' id="Nome_Cliente_Atualizado" placeholder="Nome" value="<?php echo $rowp["Nome_Cliente"]; ?>" required> <br>
