@@ -47,27 +47,6 @@ Cpf_Cliente = '".$_GET["Cpf_Cliente"]."', Data_Nascimento_Cliente = '".$_GET["Da
 echo $query;
 mysqli_query($connection,$query) or die ('Erro ao salvar..');
 echo "Salvo com sucesso";
-//mysqli_close($connection);
-
-
-  
-//$connection = mysqli_connect($host,$user,$pass,$dbname) or die (mysql_errno().": ".mysql_error()."<BR>"); 
-
-//mysqli_select_db($connection,$dbname);
-
-
-
-
-
-/*
-
-    while($tarefa = mysqli_fetch_assoc($query)){
-
-        echo $tarefas["nome"];
-
-    }*/
-
-// echo " Salvo Nome: ".$_POST["Nome_Cliente"]." cpf: ".$POST["Cpf_Cliente"] ;
 
 
 ?>
