@@ -41,26 +41,6 @@
         
     </footer>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<?php      
-    if ( $logado != "sim"){
-   
-        ?>
-        <script>
-            alert('Usuário ou senha inválidos.');
-            window.location='../login/login.html';
-        </script>
 
-   <?php  
-    }else {
-        $_SESSION["logado"]="sim";
-        ?>
-        <script>
-            alert('Usuário logado com sucesso.');
-            window.location='../listar_usuarios/listarUsuarios.php';
-        </script>
-
-   <?php 
-    }
-    ?>
 </body>
 </html>

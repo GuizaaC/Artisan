@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 <?php
-/*
-$nome = htmlspecialchars($_GET['nome']);
-=======
-<?php
-$servername = "localhost";
-$database = "u553234134_Artisan";
-$username = "u553234134_Gizaac";
-$password = "Gizaac12343124";
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
->>>>>>> edc593b6e929a128490a4a4d5ee8451823ed3f46
-
-<<<<<<< HEAD
 $sql = "UPDATE Cliente SET ('".$_GET["Email_Cliente_Atualizado"]."', '".$_GET["Nome_Cliente_Atualizado"]."', 
 =======
 
@@ -26,8 +8,6 @@ $sql = "UPDATE Cliente SET ('".$_GET["Email_Cliente_Atualizado"]."', '".$_GET["N
 
 	$eMail = htmlspecialchars($_GET['eMail']);
 */
-
-
 
 $servername = "localhost";
 $database = "u553234134_Artisan";
