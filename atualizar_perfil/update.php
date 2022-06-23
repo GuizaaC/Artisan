@@ -17,7 +17,7 @@ $query = " UPDATE Cliente SET Nome_Cliente = '".$_GET["Nome_Cliente"]."', Endere
 Cpf_Cliente = '".$_GET["Cpf_Cliente"]."', Data_Nascimento_Cliente = '".$_GET["Data_Nascimento_Cliente"]."', Email_Cliente = '".$_GET["Email_Cliente"]."',
  Senha_Cliente = '".$_GET["Senha_Cliente"]."' WHERE Id_Cliente = '".$_GET["Id_Cliente"]."' ";
 
-echo $query;
+//echo $query;
 mysqli_query($connection,$query) or die ('Erro ao salvar..');
 echo "Salvo com sucesso";
 
@@ -25,5 +25,5 @@ echo "Salvo com sucesso";
 ?>
 
 <script>
-    //window.location='../perfil_usuario/perfil.php';
+    window.location='../perfil_usuario/perfil.php';
 </script>
