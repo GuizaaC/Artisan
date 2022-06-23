@@ -1,3 +1,15 @@
+<?php session_start();
+
+if ( $_SESSION["logado"] != "sim"){
+   
+    ?>
+    <script>
+        alert('Usuário não está logado.');
+         window.location='../login/login.html';
+    </script>
+
+<?php }  
+?>
 <?php
 //dados do banco
     $servername = "localhost";
