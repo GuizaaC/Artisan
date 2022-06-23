@@ -56,7 +56,7 @@ Logado com sucesso:<?php echo $rowp["Nome_Cliente"]; ?>
         $_SESSION["logado"]="sim";
         ?>
         <script>
-            alert('Usuário ou senha inválidos.');
+            alert('Usuário logado com sucesso.');
             window.location='../listar_usuarios/listarUsuarios.php';
         </script>
 
