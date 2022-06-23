@@ -41,7 +41,7 @@
 	//selecionando os campos do banco
 	$query = ' select Id_Cliente, Nome_Cliente from Cliente ';
 
-	echo $query;
+	// echo $query;
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
 	while ($rowp = mysqli_fetch_array($resp)) {		?>					
