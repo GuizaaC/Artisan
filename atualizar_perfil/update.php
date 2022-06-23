@@ -13,9 +13,9 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 //Atualização dos dados do banco
-$query = " UPDATE Cliente SET Nome_Cliente = '".$_GET["Nome_Cliente_Atualizado"]."', Endereco_Cliente = '".$_GET["Endereco_Cliente_Atualizado"]."', Telefone_Cliente = '".$_GET["Telefone_Cliente_Atualizado"]."', 
-Cpf_Cliente = '".$_GET["CPF_Cliente_Atualizado"]."', Data_Nascimento_Cliente = '".$_GET["Data_Cliente_Atualizado"]."', Email_Cliente = '".$_GET["Email_Cliente_Atualizado"]."',
- Senha_Cliente = '".$_GET["Senha_Cliente_Atualizado"]."' WHERE Id_Cliente = '".$_GET["Id_Cliente"]."' ";
+$query = " UPDATE Cliente SET Nome_Cliente = '".$_GET["Nome_Cliente"]."', Endereco_Cliente = '".$_GET["Endereco_Cliente"]."', Telefone_Cliente = '".$_GET["Telefone_Cliente"]."', 
+Cpf_Cliente = '".$_GET["Cpf_Cliente"]."', Data_Nascimento_Cliente = '".$_GET["Data_Nascimento_Cliente"]."', Email_Cliente = '".$_GET["Email_Cliente"]."',
+ Senha_Cliente = '".$_GET["Senha_Cliente"]."' WHERE Id_Cliente = '".$_GET["Id_Cliente"]."' ";
 
 echo $query;
 mysqli_query($connection,$query) or die ('Erro ao salvar..');

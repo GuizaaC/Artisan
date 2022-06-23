@@ -76,7 +76,7 @@ if ( $_SESSION["logado"] != "sim"){
         <!-- Campo senha -->
     <label class="titulo">Senha</label>
         <input class="entrada" type="password" min="5" max="10" name="Senha_Cliente" id="Senha_cliente_Atualizado" placeholder="Senha" value="<?php echo $rowp["Senha_Cliente"]; ?>" required><br>
-    <input class="entrada" type="hidden" name="Id_Cliente" id="Id_Cliente" value="<?php echo $_POST["Id_Cliente"]; ?>"><br>
+    <input class="entrada" type="hidden" name="Id_Cliente" id="Id_Cliente" value="<?php echo $_GET["Id_Cliente"]; ?>"><br>
     <?php      
     };
     ?>
