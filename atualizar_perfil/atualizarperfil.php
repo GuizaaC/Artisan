@@ -63,7 +63,7 @@ if ( $_SESSION["logado"] != "sim"){
         <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente_Atualizado" placeholder="Endereço" value="<?php echo $rowp["Endereco_Cliente"]; ?>" required>  <br>
         <!-- Campo Telefone -->
     <label class="titulo">Telefone</label> <br>
-        <input class="entrada" type="tel" max="11"name='Telefone_Cliente_Atualizado' id="Telefone_Cliente" placeholder="(00)90000-0000" value="<?php echo $rowp["Telefone_Cliente"]; ?>" required> <br>
+        <input class="entrada" type="tel" max="11"name='Telefone_Cliente' id="Telefone_Cliente_Atualizado" placeholder="(00)90000-0000" value="<?php echo $rowp["Telefone_Cliente"]; ?>" required> <br>
         <!-- Campo CPF -->
     <label class="titulo">CPF</label> <br>
         <input class="entrada" min="11" max="11"name='Cpf_Cliente' id="CPF_Cliente_Atualizado" placeholder="000.000.000-00" value="<?php echo $rowp["CPF_Cliente"]; ?>" required > <br>
