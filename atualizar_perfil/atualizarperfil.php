@@ -80,7 +80,7 @@ if ( $_SESSION["logado"] != "sim"){
     <?php      
     };
     ?>
-    <input class="enviar" type=button value="Atualizar" onclick="fnValidar();">
+    <input class="enviar" type=button value="Atualizar" onclick="fnAtualizar();">
 
 </form> 
 

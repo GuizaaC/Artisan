@@ -1,5 +1,5 @@
 //      ##########campos obrigatórios##########
-function fnValidar(){
+function fnAtualizar(){
     if (document.getElementById("Nome_Cliente_Atualizado").value==0){
         alert("Campo nome é obrigatório");
         document.getElementById("Nome_Cliente_Atualizado").focus();
