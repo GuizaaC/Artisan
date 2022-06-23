@@ -23,9 +23,9 @@ function fnAtualizar(){
      return false
     }
 
-    if (document.getElementById("Data_Nascimento_Cliente").value==0){
+    if (document.getElementById("Data_Cliente_Atualizado").value==0){
         alert("Campo data de nascimento é obrigatório");
-        document.getElementById("Data_Nascimento_Cliente").focus();
+        document.getElementById("Data_Cliente_Atualizado").focus();
      return false
     }
     if (document.getElementById("Email_Cliente_Atualizado").value==0){
