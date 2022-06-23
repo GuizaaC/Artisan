@@ -50,5 +50,5 @@ echo "Salvo com sucesso";
 ?>
 
 <script>
-    window.location='../perfil_usuario/perfil.php';
+    //window.location='../perfil_usuario/perfil.php';
 </script>
