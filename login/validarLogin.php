@@ -48,7 +48,7 @@ Logado com sucesso:<?php echo $rowp["Nome_Cliente"]; ?>
         ?>
         <script>
             alert('Usuário ou senha inválidos.');
-            window.location='../login/login.html';
+            // window.location='../login/login.html';
         </script>
 
    <?php  
