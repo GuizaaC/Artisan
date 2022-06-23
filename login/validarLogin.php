@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +35,7 @@
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
     $_SESSION["logado"]=  "nao";
 	while ($rowp = mysqli_fetch_array($resp)) {	
-        $_SESSION["logado"]=  "sim";
+        $logado=  "sim";
         $_SESSION["Id_Cliente"]=  $rowp["Id_Cliente"];
         
 
@@ -42,7 +43,8 @@
 Logado com sucesso:<?php echo $rowp["Nome_Cliente"]; ?>
     <?php      
     };
-    if ($_SESSION["logado"] != "sim"){
+    if ( $logado != "sim"){
+   
         ?>
         <script>
             alert('Usuário ou senha inválidos.');
@@ -50,6 +52,8 @@ Logado com sucesso:<?php echo $rowp["Nome_Cliente"]; ?>
         </script>
 
    <?php  
+    }else {
+        $_SESSION["logado"]="sim";
     }
     ?>
 </body>
