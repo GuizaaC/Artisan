@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<!-- cabeçalho -->
+<!-- cabeçalho -->
     <header class="topo">
 
         <a href="../index.html">
@@ -23,7 +23,7 @@
 <br> <br><br>
     <div class="container">
     
-	<!-- informações do banco de dados -->
+<!-- informações do banco de dados -->
 <?php
 	$servername = "localhost";
 	$database = "u553234134_Artisan";
@@ -38,15 +38,13 @@
 		die("Connection failed: " . mysqli_connect_error());
 	}
 
-	//selecionando os campos do banco
+//selecionando os campos do banco
 	$query = ' select Id_Cliente, Nome_Cliente from Cliente ';
-
-	// echo $query;
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
 	while ($rowp = mysqli_fetch_array($resp)) {		?>					
 	
-	<!-- lista desordenada dos usuarios -->
+<!-- lista desordenada dos usuarios -->
 	<UL>
 		<li class="lista ">
 		<?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?>
@@ -57,8 +55,6 @@
 
 	<?php 
 	};
-
-//mysqli_select_db($connection,$database);
 ?>
 
     </form> 

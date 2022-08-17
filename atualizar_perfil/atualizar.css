@@ -1,7 +1,6 @@
 /* Header */
 .topo{
     font-family: Arial, Helvetica, sans-serif;
-
     align-items: center;
     background-color: #fff;
     display: flex;
@@ -10,7 +9,6 @@
     padding: 0 8px 0 12px;
     position: relative;
     z-index: 2;
-
     margin: 0px;
     padding: 20px;
     align-items: center;
@@ -37,7 +35,6 @@ body{
     background-image: url(../assets/Folhas.jpg);
     background-position: center;
     background-repeat: no-repeat;
-
     margin: 0px;
 }
 
@@ -60,7 +57,6 @@ body{
     border-radius: 12px;
     border: 1px solid rgba(209, 213, 219, 0.3);
     position: inherit;
-
 }
 
 /* Input styles */
@@ -74,6 +70,7 @@ input{
     border-radius: 10px;
 }
 
+/* Update button */
 .enviar {
         position: relative;
         font-size: 10px;
@@ -89,15 +86,15 @@ input{
         color: black;
         background-color: white;
 }
- 
-   .enviar:hover {
+    /* update button Mouse hover */
+.enviar:hover {
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-   }   
+    }   
    .enviar:active {
         transform: translateY(-1px);
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-   }
+    }
    .enviar::after {
         content: "";
         display: inline-block;
@@ -117,7 +114,6 @@ input{
    }
 
 /*Input styles*/
-
 .entrada{
     position: relative;
     font-size: 12px;

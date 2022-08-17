@@ -44,7 +44,6 @@ if ( $_SESSION["logado"] != "sim"){
 	//seleção de campos
 	$query = " select Id_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, CPF_Cliente, Data_Nascimento_Cliente, Email_Cliente, Senha_Cliente from 
     Cliente Where Id_Cliente = ".$_GET["Id_Cliente"];
-	    //echo $query;
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
 	while ($rowp = mysqli_fetch_array($resp)) {	

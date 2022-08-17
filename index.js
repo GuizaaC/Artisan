@@ -14,11 +14,11 @@ app.use(bodyParser.urlencoded({ extended: false}));
 
 
 const connection = mysql.createConnection({
-  host:  "185.213.81.205", // host 
-  user: "u553234134_GuIzaac", // user 
-  password: "Gzaac12343124", // password 
-  database: "u553234134_BD_Artisan", // database
-  port: "3306" // port 
+  host:  "185.213.81.205", // Anfitrião 
+  user: "u553234134_GuIzaac", // Usuário
+  password: "Gzaac12343124", // Senha 
+  database: "u553234134_BD_Artisan", // Banco de dados
+  port: "3306" // Port 
 });
 app.get("/", function (req, res){
   connection.query("select * from Cliente",
@@ -34,7 +34,7 @@ app.get("/", function (req, res){
 })
 
   
-//cadastro
+//Cadastrar
 app.get("/cadastrar", function(req,res){
   res.render(__dirname+"/Cadastro/cadastro.html",{msg:"Cadastro de novos usuarios"});
 })
