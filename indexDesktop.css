@@ -35,6 +35,8 @@ body{
     height: 30px;
     background-color: rgb(255, 255, 255);
     display: inline-block;
+    width: 100%;
+    margin: 0;
 }
 
 .logo{
