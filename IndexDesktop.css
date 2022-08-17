@@ -17,7 +17,7 @@ body{
 .topo{
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
     display: flex;
     height: 20px;
     justify-content: space-between;
@@ -30,6 +30,13 @@ body{
     align-items: center;
     margin-bottom: 10px;
 }
+
+#subHeader{
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+}
+
 .logo{
     height: 50px;
     position: center;
@@ -37,8 +44,8 @@ body{
 
      /*########## botao de login ##########*/
 .login{
-    background-color: #CB6453;
-    color: white;
+    background-color: #cb6453;
+    color: rgb(255, 255, 255);
     border: none;
     padding:10px  ;
     border-radius: 10px;
@@ -80,7 +87,7 @@ body{
 }
 
 footer{
-    background-color: green;
+    background-color: rgb(0, 128, 0);
 }
 
 @media (max-width: 600px)
