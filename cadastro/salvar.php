@@ -22,7 +22,16 @@
     echo $query;
     mysqli_query($connection,$query) or die ('Erro ao salvar..');
     echo "Salvo com sucesso";
-    ?>
+
+        $query = " select Id_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, CPF_Cliente, Data_Nascimento_Cliente, Email_Cliente, Senha_Cliente from 
+        Cliente Where Email_Cliente = '".$_POST["Email_Cliente"]."' and Senha_Cliente = '".$_POST["Senha_Cliente"]."'" ;
+        $resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
+        $_SESSION["logado"]=  "nao";
+        while ($rowp = mysqli_fetch_array($resp)) {	        
+            $_SESSION["Id_Cliente"]=  $rowp["Id_Cliente"];   
+        };
+
+        ?>
 
 
     <script>
