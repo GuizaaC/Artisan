@@ -36,8 +36,6 @@
 	while ($rowp = mysqli_fetch_array($resp)) {	
         $logado=  "sim";
         $_SESSION["Id_Cliente"]=  $rowp["Id_Cliente"];
-        
-
 ?>
 Logado com sucesso:<?php echo $rowp["Nome_Cliente"]; ?>
     <?php      
