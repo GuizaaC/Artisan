@@ -25,5 +25,5 @@ echo "Salvo com sucesso";
 ?>
 
 <script>
-    window.location='../perfil_usuario/perfil.php';
+    window.location='../listar_usuarios/listarUsuarios.php';
 </script>

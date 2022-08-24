@@ -30,6 +30,7 @@ $query = " DELETE FROM Cliente WHERE  Id_Cliente = '".$_GET["Id_Cliente"]."' ";
 echo $query;
 mysqli_query($connection,$query) or die ('Erro ao Deletar..');
 echo "Deletado com sucesso";
+//session_destroy()
 ?>
 
 <script>
