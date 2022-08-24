@@ -25,8 +25,8 @@
         
     <li>Perfil
         <ul>
-            <li><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'> Alterar dados do cadastro</a></li>
-            <li><a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'>Deletar perfil</a></li>
+            <li><a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $_SESSION["Id_Cliente"];  ?>'> Alterar dados do cadastro</a></li>
+            <li><a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $_SESSION["Id_Cliente"];  ?>'>Deletar perfil</a></li>
             <li><a href='../listar_usuarios/listarUsuarios.php'>listar Clientes</a></li>
         </ul>
     </li>
