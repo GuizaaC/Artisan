@@ -8,6 +8,7 @@
 
     #primeira_tela {
         position: relative;
+        text-align: center;
         height: 1080px;
         width: 100%;
     }
