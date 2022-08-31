@@ -16,7 +16,7 @@ html, body{
 #segunda_tela{
     background-image: url(../assets/ferramentas.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;   
+    background-attachment: sticky;   
     background-size: cover;
 
     position: relative;
