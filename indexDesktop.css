@@ -11,7 +11,7 @@
         text-align: center;
 
         color: rgb(255, 255, 255);
-        font-size: 40px;
+        font-size: 30px;
         height: 1080px;
         width: 100%;
     }
@@ -22,15 +22,17 @@
         align-items: center;
         position: relative;
         display: flex;
-        gap: 50px;
+        
         
         
         padding: 0 8px 0 12px;
         padding: 20px;
         height: 30px;
         margin: 0px;
+        font-size: 30px bold;
         /* z-index: 2; */
-        gap: 100px;   
+        gap: 100px;
+        gap: 50px;   
     }
 
     #primeira_tela > p {
