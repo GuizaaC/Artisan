@@ -12,6 +12,22 @@
         height: 1080px;
         width: 100%;
     }
+    
+    #primeira_tela > .topo {
+        font-family: Arial, Helvetica, sans-serif;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        display: flex;
+        
+        color: rgb(255, 255, 255);
+        padding: 0 8px 0 12px;
+        padding: 20px;
+        height: 20px;
+        margin: 0px;
+        z-index: 2;
+        gap: 100px;   
+    }
 
     #primeira_tela > p {
         text-align: center;
@@ -30,21 +46,7 @@
         width: 100%;    
     }
 
-    .topo {
-        font-family: Arial, Helvetica, sans-serif;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        display: flex;
-        
-        color: rgb(255, 255, 255);
-        padding: 0 8px 0 12px;
-        padding: 20px;
-        height: 20px;
-        margin: 0px;
-        z-index: 2;
-        gap: 100px;   
-    }
+    
 
     #segunda_tela {
         align-items: center;
