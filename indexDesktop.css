@@ -49,10 +49,7 @@ body{
 }
 
 #segunda_tela{
-
-    background-repeat: no-repeat;
-    background-attachment: fixed;   
-    background-size: cover;
+background-color: antiquewhite;
 }
 
 #subHeader{
