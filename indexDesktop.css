@@ -10,7 +10,10 @@ body{
 }
 
 #primeira_tela{
-    height: 100vh;
+    background-image: url(../assets/ferramentas.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    background-size: cover;
 }
 
 #primeira_tela > .topo{
