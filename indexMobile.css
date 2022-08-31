@@ -8,7 +8,7 @@
     /*########## background ##########*/
     body {
         background-image: "../asse";
-        background-image: url(../assets/Folhas.jpg);
+        background-image: url(../assets/sapataria.jpg);
         background-repeat: no-repeat;
         background-attachment: fixed;
 
@@ -85,6 +85,18 @@
         padding:10px  ;
         border-radius: 10px;
         
+    }
+    .instagram{
+        height: 50px;
+        position: center;
+    }
+    .facebook{
+        height: 50px;
+        position: center;
+    }
+    .twitter{
+        height: 50px;
+        position: center;
     }
 
     .corpo-esq {
