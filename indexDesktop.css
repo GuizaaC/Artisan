@@ -9,14 +9,14 @@ body{
     
 }
 
-#primeira_tela{
+body{
     background-image: url(../assets/ferramentas.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;   
     background-size: cover;
 }
 
-#primeira_tela > .topo{
+.topo{
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
     
