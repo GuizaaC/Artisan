@@ -66,6 +66,38 @@ body{
     float: right;
     
 }
+.produtos{
+    background-color: #cb6453;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding:10px  ;
+    border-radius: 10px;
+    
+}
+.serviços{
+    background-color: #cb6453;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding:10px  ;
+    border-radius: 10px;
+    
+}
+.equipe{
+    background-color: #cb6453;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding:10px  ;
+    border-radius: 10px;
+    
+}
+.contatos{
+    background-color: #cb6453;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding:10px  ;
+    border-radius: 10px;
+    
+}
 
 .corpo-esq{
     backdrop-filter: blur(2px) saturate(59%);
