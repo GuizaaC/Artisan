@@ -13,12 +13,11 @@ html, body{
 
 }
 
-#segunda_tela{
+#primeiro_bg{
     background-image: url(../assets/ferramentas.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;   
+    background-attachment: sticky;   
     background-size: cover;
-
 
     width: 100%;
     height: 1080px;
