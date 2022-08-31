@@ -1,7 +1,8 @@
     /*########## configurações do corpo ##########*/
-    html,body {
+    html,
+    body {
         padding: 0;
-        margin: 0;  
+        margin: 0;
     }
 
     /*########## background ##########*/
@@ -14,23 +15,23 @@
         height: 1080px;
         width: 100%;
     }
-    
+
     #primeira_tela > .topo {
         font-family: Arial, Helvetica, sans-serif;
         justify-content: center;
         align-items: center;
         position: relative;
         display: flex;
-        
+
         padding: 0 8px 0 12px;
         padding: 20px;
         height: 30px;
         margin: 0px;
         gap: 100px;
-        gap: 50px;   
+        gap: 50px;
     }
 
-    #primeira_tela > p {
+    #primeira_tela>p {
         text-align: center;
     }
 
@@ -42,25 +43,19 @@
 
         margin-top: -1080px;
         height: 1080px;
-        width: 100%;    
+        width: 100%;
     }
 
-    
-
     #segunda_tela {
-        align-items: center;
-        text-align: center;
-
         background-color: rgb(250, 235, 215);
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        text-align: center;
+        display: flex;
+        
         font-size: 50px;
-        height: 500px;
-
-
-
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+        height: 500px;   
     }
 
     .logo {
@@ -87,13 +82,13 @@ align-items: center;
             align-content: normal;
             align-items: normal;
             flex-wrap: nowrap;
-            display: flex;    
+            display: flex;
         }
 
         .corpo-esq {
             height: 200px;
             width: 100%;
-            order: 0;   
+            order: 0;
         }
 
         .corpo-dir {
