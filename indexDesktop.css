@@ -15,7 +15,8 @@
 
     #primeira_tela > p {
         text-align: center;
-        margin: auto;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     #primeiro_bg {
