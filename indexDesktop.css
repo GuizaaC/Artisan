@@ -50,6 +50,9 @@ body{
 
 #segunda_tela{
 background-color: antiquewhite;
+height: 500px;
+text-align: center;
+font-size: 50px;
 }
 
 #subHeader{
