@@ -78,6 +78,7 @@
         scroll-snap-type: x mandatory;
         scroll-padding: 25px;
         column-gap: 20px;
+        background-color: rgb(250, 235, 215);
     }
 
     .card{
