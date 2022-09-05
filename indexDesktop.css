@@ -60,6 +60,7 @@
 
     #segunda_tela  > p{
         margin: auto;
+        color: white;
     }
 
     .logo {
