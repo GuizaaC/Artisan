@@ -58,6 +58,10 @@
         height: 500px;   
     }
 
+    #segunda_tela  > p{
+        margin: auto;
+    }
+
     .logo {
         position: center;
 
