@@ -72,6 +72,7 @@
         width: 100%;
     }
 
+    /* slider
     .conteudo{
         display: flex;
         width: 350px;
@@ -86,7 +87,7 @@
         padding: 30px;
         scroll-snap-align: start;
         border-radius: 30px;
-    }
+    } */
 
     .logo {
         position: center;
