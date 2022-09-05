@@ -70,7 +70,9 @@
     .gap {
         height: 500px;
         width: 100%;
+    }
 
+    .conteudo{
         display: flex;
         width: 350px;
         scroll-snap-type: x mandatory;
