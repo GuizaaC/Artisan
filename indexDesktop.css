@@ -52,7 +52,7 @@
 
     .tarja {
         background-color: rgb(250, 235, 215);
-        color: rgb(255, 255, 255);
+        color: grey;
         justify-content: center;
         align-items: center;
         flex-direction: row;
@@ -60,7 +60,7 @@
         display: flex;
 
         font-size: 50px;
-        height: 400px;
+        height: 350px;
     }
 
     #segunda_tela>p {
