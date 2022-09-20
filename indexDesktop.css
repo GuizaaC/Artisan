@@ -101,10 +101,8 @@
         background-color: #cb6453;
         border: none;
         float: right;
-
-        color: rgb(255, 255, 255);
-        border-radius: 10px;
-        padding: 10px;
+        position: absolute;
+        
     }
 
     @media (max-width: 600px) {
