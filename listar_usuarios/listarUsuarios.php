@@ -77,12 +77,14 @@
                     <a href="mailto:<?php echo $rowp["Email_Cliente"]  ?>" class="btn">Contact</a>
                 </div>
                 <div class="action">
-                        <div class="icon">
+					<details>
+                        <summary class="icon">
                             <span></span>
                             <span></span>
                             <span></span>
-                        <p>deletar</p>
-                </div>
+						</summary>
+						<p>deletar</p>
+					</details>
             </div>
         </div>
     </main>

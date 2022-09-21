@@ -17,6 +17,40 @@
         ( Email_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, Cpf_Cliente, Data_Nascimento_Cliente, Senha_Cliente)
     VALUES('".$_POST["Email_Cliente"]."', '".$_POST["Nome_Cliente"]."', '".$_POST["Endereco_Cliente"]."','".$_POST["Telefone_Cliente"]."', 
         '".$_POST["Cpf_Cliente"]."', '".$_POST["Data_Nascimento_Cliente"]."','".$_POST["Senha_Cliente"]."');";
+    /*  namespace Verot\Upload;
+    $foo = new Upload($_FILES['Img_Cliente']); 
+        if ($foo->uploaded) {
+        // save uploaded image with no changes
+        $foo->process('/home/user/files/');
+        if ($foo->processed) {
+            echo 'original image copied';
+        } else {
+            echo 'error : ' . $foo->error;
+        }
+        // save uploaded image with a new name
+        $foo->file_new_name_body = 'foo';
+        $foo->process('/imagens');
+        if ($foo->processed) {
+            echo 'image renamed "foo" copied';
+        } else {
+            echo 'error : ' . $foo->error;
+        }   
+        // save uploaded image with a new name,
+        // resized to 100px wide
+        $foo->file_new_name_body = 'image_resized';
+        $foo->image_resize = true;
+        $foo->image_convert = 'gif';
+        $foo->image_x = 100;
+        $foo->image_ratio_y = true;
+        $foo->process('/home/user/files/');
+        if ($foo->processed) {
+            echo 'image renamed, resized x=100
+                and converted to GIF';
+            $foo->clean();
+        } else {
+            echo 'error : ' . $foo->error;
+        } 
+    }  */
 
 //Confirmação do salvamento
     echo $query;

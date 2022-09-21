@@ -41,6 +41,7 @@
             <!-- Campo senha -->
             <label class="titulo">Senha</label>
                 <input class="entrada" type="password" min="5" max="10" name="Senha_Cliente" id="senha_cliente" placeholder="Senha" required><br>
+            <input class = "imagem" type = "file" name = " Img_Cliente">
 
             <!-- Validação -->
             <input class="enviar" type=button value="Enviar" onclick="fnValidar();">
