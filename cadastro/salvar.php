@@ -49,7 +49,7 @@
             $foo->clean();
         } else {
             echo 'error : ' . $foo->error;
-        } 
+        } enctype = "multipart/form-data"
     }  */
 
 //Confirmação do salvamento
