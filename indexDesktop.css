@@ -97,7 +97,7 @@
     }
 
     /*########## botao de login ##########*/
-    .login {
+    #entrar {
         background-color: #cb6453;
         border: none;
         float: right;
