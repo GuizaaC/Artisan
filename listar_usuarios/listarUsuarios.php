@@ -74,7 +74,6 @@
                     <p><?php echo $rowp["Telefone_Cliente"]; ?></p>
                 </div>
                 <div class="contact">
-					<a href="mailto:webmaster@example.com" class="btn">Jon Doe</a>
                     <a href="mailto:<?php echo $rowp["Email_Cliente"]  ?>" class="btn">Contact</a>
                 </div>
                 <div class="action">
