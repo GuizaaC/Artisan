@@ -59,8 +59,8 @@
                         <img src="/assets/img.jpg" alt="" >
                     </div>
                     <div class="details">
-                        <h1 class="name"><?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?></h1>
-                        <h3 class="username">Gizaac312</h3>
+                        <h1 class="name"><?php echo $rowp["Nome_Cliente"]  ?></h1>
+                        <h3 class="username"><?php echo $rowp["Id_Cliente"]; ?></h3>
                     </div>
                 </div>
                 <div class="status">
@@ -71,10 +71,11 @@
                     <p>Brasília</p>
                 </div>
                 <div class="phone">
-                    <p>+5561993791617</p>
+                    <p><?php echo $rowp["Telefone_Cliente"]; ?></p>
                 </div>
                 <div class="contact">
-                    <a href="#" class="btn">Contact</a>
+					<a href="mailto:webmaster@example.com" class="btn">Jon Doe</a>
+                    <a href="mailto:<?php echo $rowp["Email_Cliente"]  ?>" class="btn">Contact</a>
                 </div>
                 <div class="action">
                         <div class="icon">
