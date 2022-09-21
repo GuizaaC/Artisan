@@ -59,7 +59,7 @@
                         <img src="/assets/img.jpg" alt="" >
                     </div>
                     <div class="details">
-                        <h1 class="name">Guilherme</h1>
+                        <h1 class="name"><?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?></h1>
                         <h3 class="username">Gizaac312</h3>
                     </div>
                 </div>
