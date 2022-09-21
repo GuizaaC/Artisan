@@ -21,7 +21,7 @@
     $foo = new Upload($_FILES['Img_Cliente']); 
         if ($foo->uploaded) {
         // save uploaded image with no changes
-        $foo->process('/home/user/files/');
+        $foo->process('/cadastro/cadastro.php/');
         if ($foo->processed) {
             echo 'original image copied';
         } else {
@@ -49,7 +49,7 @@
             $foo->clean();
         } else {
             echo 'error : ' . $foo->error;
-        } enctype = "multipart/form-data"
+        } 
     }  */
 
 //Confirmação do salvamento

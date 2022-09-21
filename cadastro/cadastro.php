@@ -19,7 +19,7 @@
     
 <br> <br><br>
     <div class="container">
-    <form id="formSalvar" action='salvar.php' method="POST" onsubmit enctype = "multipart/form-data">
+    <form id="formSalvar" action='salvar.php' method="POST" enctype = "multipart/form-data" onsubmit>
             <!-- Campo nome -->
             <label class="titulo">Nome</label> <br>  
                 <input class="entrada" name='Nome_Cliente' id="Nome_Cliente" placeholder="Nome" required> <br>

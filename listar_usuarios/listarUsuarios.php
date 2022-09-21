@@ -79,11 +79,11 @@
                 <div class="action">
 					<details>
 					<div class="icon">
-                        <summary >
+                        
                             <span></span>
                             <span></span>
                             <span></span>
-						</summary>
+						
 						<p>deletar</p>
 					</div>
 				</details>
