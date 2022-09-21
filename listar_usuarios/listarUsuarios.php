@@ -50,6 +50,42 @@
 		<?php echo $rowp["Id_Cliente"]; ?>-<?php echo $rowp["Nome_Cliente"]  ?>
 		<a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Editar<label/></a> 
 		<a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Deletar<label/></a> </li><br> <br> 
+	
+		<main>
+        <div class="list">
+            <div class="line">
+                <div class="user">
+                    <div class="profile">
+                        <img src="/assets/img.jpg" alt="" >
+                    </div>
+                    <div class="details">
+                        <h1 class="name">Guilherme</h1>
+                        <h3 class="username">Gizaac312</h3>
+                    </div>
+                </div>
+                <div class="status">
+                    <span></span>
+                    <p>Ativo</p>
+                </div>
+                <div class="location">
+                    <p>Brasília</p>
+                </div>
+                <div class="phone">
+                    <p>+5561993791617</p>
+                </div>
+                <div class="contact">
+                    <a href="#" class="btn">Contact</a>
+                </div>
+                <div class="action">
+                        <div class="icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        <p>deletar</p>
+                </div>
+            </div>
+        </div>
+    </main>
 	</UL>
 	
 
