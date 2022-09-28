@@ -32,7 +32,7 @@
         height: 30px;
         margin: 0px;
         gap: 100px;
-        gap: 50px;
+        gap: 50px; 
     }
 
     #primeira_tela>p {
@@ -40,7 +40,7 @@
     }
 
     #primeiro_bg {
-        background-color: #846D51;
+        background-color: #182747;
         background-attachment: sticky;
         background-repeat: no-repeat;
         background-size: cover;
