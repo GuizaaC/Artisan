@@ -17,8 +17,8 @@
         ( Email_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, Cpf_Cliente, Data_Nascimento_Cliente, Senha_Cliente)
     VALUES('".$_POST["Email_Cliente"]."', '".$_POST["Nome_Cliente"]."', '".$_POST["Endereco_Cliente"]."','".$_POST["Telefone_Cliente"]."', 
         '".$_POST["Cpf_Cliente"]."', '".$_POST["Data_Nascimento_Cliente"]."','".$_POST["Senha_Cliente"]."');";
-
-    /*$foo = new Upload($_FILES['Img_Cliente']); 
+    /*  namespace Verot\Upload;
+    $foo = new Upload($_FILES['Img_Cliente']); 
         if ($foo->uploaded) {
         // save uploaded image with no changes
         $foo->process('/imagem_cliente');
@@ -42,6 +42,7 @@
         $foo->image_convert = 'jpg';
         $foo->image_x = 56;
         $foo->image_y = 56;
+        $foo->image_ratio_y = true;
         $foo->process('/imagem_cliente');
         if ($foo->processed) {
             echo 'image renamed, resized x=56, resized y=56
