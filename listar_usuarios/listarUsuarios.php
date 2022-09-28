@@ -1,3 +1,16 @@
+
+<?php session_start();
+
+if ( $_SESSION["logado"] != "sim"){
+   
+    ?>
+    <script>
+        alert('Usuário não está logado.');
+         window.location='../login/login.html';
+    </script>
+
+<?php }  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
