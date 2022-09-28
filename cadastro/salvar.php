@@ -17,13 +17,13 @@
         ( Email_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, Cpf_Cliente, Data_Nascimento_Cliente, Senha_Cliente)
     VALUES('".$_POST["Email_Cliente"]."', '".$_POST["Nome_Cliente"]."', '".$_POST["Endereco_Cliente"]."','".$_POST["Telefone_Cliente"]."', 
         '".$_POST["Cpf_Cliente"]."', '".$_POST["Data_Nascimento_Cliente"]."','".$_POST["Senha_Cliente"]."');";
-    /*  namespace Verot\Upload;
+        
     $foo = new Upload($_FILES['Img_Cliente']); 
         if ($foo->uploaded) {
         // save uploaded image with no changes
-        $foo->process('/cadastro/cadastro.php/');
+        $foo->process('/imagem_cliente');
         if ($foo->processed) {
-            echo 'original image copied';
+            echo 'Imagem original copiada';
         } else {
             echo 'error : ' . $foo->error;
         }
@@ -35,22 +35,22 @@
         } else {
             echo 'error : ' . $foo->error;
         }   
-        // save uploaded image with a new name,
-        // resized to 100px wide
+        // save uploaded image with a new name
+
         $foo->file_new_name_body = 'image_resized';
         $foo->image_resize = true;
-        $foo->image_convert = 'gif';
-        $foo->image_x = 100;
-        $foo->image_ratio_y = true;
-        $foo->process('/home/user/files/');
+        $foo->image_convert = 'jpg';
+        $foo->image_x = 56;
+        $foo->image_y = 56;
+        $foo->process('/imagem_cliente');
         if ($foo->processed) {
-            echo 'image renamed, resized x=100
-                and converted to GIF';
+            echo 'image renamed, resized x=56, resized y=56
+                and converted to jpg';
             $foo->clean();
         } else {
             echo 'error : ' . $foo->error;
         } 
-    }  */
+    }  
 
 //Confirmação do salvamento
     echo $query;
