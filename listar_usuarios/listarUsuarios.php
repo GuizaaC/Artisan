@@ -56,7 +56,7 @@
             <div class="line">
                 <div class="user">
                     <div class="profile">
-                        <img src="/assets/img.jpg" alt="" >
+                        <img src="./assets/user-image.png" alt="" >
                     </div>
                     <div class="details">
                         <h1 class="name"><?php echo $rowp["Nome_Cliente"]  ?></h1>
