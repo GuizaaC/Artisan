@@ -84,7 +84,6 @@
                             <span></span>
                             <span></span>
 						</summary>
-						<p>deletar</p>
 					</div>
 				
             </div>
