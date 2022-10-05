@@ -28,7 +28,7 @@
                 <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente" placeholder="Endereço" required>  <br>
             <!-- Campo Telefone -->
             <label class="titulo">Telefone</label> <br>
-                <input class="entrada" type="tel" maxlength="13"name='Telefone_Cliente' id="Telefone_Cliente" data-mask="(00)0000-0000" data-mask-selectonfocus="true"  required> <br>
+                <input class="entrada" type="tel" maxlength="13"name='Telefone_Cliente' id="Telefone_Cliente" placeholder="(00)90000-0000"  required> <br>
             <!-- Campo CPF -->
             <label class="titulo">CPF</label> <br>
                 <input class="entrada"  maxlength="14"name='Cpf_Cliente' id="CPF_Cliente" placeholder="000.000.000-00" required > <br>

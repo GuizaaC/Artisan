@@ -41,3 +41,13 @@ function fnValidar(){
     
     document.getElementById("formSalvar").submit();
  }
+const input = document.querySelector('CPF_Cliente')
+input.addEventListener('keypress',() =>{
+  let inputlenght = input.value.length
+
+  if(inputlength === 3 || inputlenght === 7){
+    input.value += '.'
+  }else if(inputlenght === 11){
+    input.value += '-'
+  }
+})
