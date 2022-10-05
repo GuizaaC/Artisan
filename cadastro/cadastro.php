@@ -31,7 +31,7 @@
                 <input class="entrada" type="tel" maxlength="13"name='Telefone_Cliente' id="Telefone_Cliente" placeholder="(00)90000-0000"  required> <br>
             <!-- Campo CPF -->
             <label class="titulo">CPF</label> <br>
-                <input class="entrada"  maxlength="14"name='Cpf_Cliente' id="CPF_Cliente" placeholder="000.000.000-00" autocomplete="off" onkeyup="mascara_cpf" required > <br>
+                <input class="entrada"  maxlength="14"name='Cpf_Cliente' id="CPF_Cliente" placeholder="000.000.000-00"  required > <br>
             <!-- Campo Data de nascimento -->
             <label class="titulo">Data de Nascimento</label> <br>
                 <input class="entrada" min="1900-01-01" max="2100-12-31" type="date" name='Data_Nascimento_Cliente' id="Data_Cliente" placeholder="DD/MM/AAAA" required> <br>

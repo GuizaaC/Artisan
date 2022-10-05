@@ -41,11 +41,11 @@ function fnValidar(){
     
     document.getElementById("formSalvar").submit();
  }
- function mascara_cpf(){
+ /*function mascara_cpf(){
     var cpf = document.getElementById('CPF_Cliente')
     if(cpf.value.lenght == 3 || cpf.value.lenght == 7){
         cpf.value = cpf.value += "."
     }else if(cpf.value.lenght == 11){
         cpf.value = cpf.value += "-"
     }
- }
+ }*/
