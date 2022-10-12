@@ -83,6 +83,11 @@
                             <span></span>
                             <span></span>
                             <span></span>
+
+                            <div id="myDropdown1" class="dropdown-content">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
 						</summary>
 					</div>
 				
@@ -97,7 +102,8 @@
 ?>
 
     </form> 
- <script src="/cadastro/cadastro.js"></script>
+ <!-- <script src="/cadastro/cadastro.js"></script> -->
+ <script src="/listar.js"></script>
 </body>
 </html>
 
