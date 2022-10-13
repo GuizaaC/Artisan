@@ -84,7 +84,7 @@
                             <span></span>
                             <span></span>
 
-                            <div id="myDropdown" class="dropdown-content">
+                            <div id="myDropdown2" class="dropdown-content">
                             <a href="#home">Home</a>
                             <a href="#about">About</a>
                             <a href="#contact">Contact</a>
@@ -103,7 +103,7 @@
 
     </form> 
  <!-- <script src="/cadastro/cadastro.js"></script> -->
- <script src="./listar.js"></script>
+ <script src="/listar.js"></script>
 </body>
 </html>
 
