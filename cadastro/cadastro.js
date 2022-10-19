@@ -41,11 +41,11 @@ function fnValidar(){
     
     document.getElementById("formSalvar").submit();
  }
- function mascara_cpf(){
+ /*function mascara_cpf(){
     var cpf = document.getElementById('CPF_Cliente')
-    if(cpf.value.lenght == 3 || cpf.value.lenght == 7){
+    if(cpf.value.lenght == 4 || cpf.value.lenght == 8){
         cpf.value = cpf.value += "."
-    }else if(cpf.value.lenght == 11){
+    }else if(cpf.value.lenght == 12){
         cpf.value = cpf.value += "-"
     }
     alert("funcionou");
@@ -60,7 +60,7 @@ function fnValidar(){
         cpf.value = cpf.value += "-"
     }
     alert("funcionou");
- }
+}*/
 //Função para caso apertar enter, o botão aceita o comando
             /*document.addEventListener("keypress", function(e) {
                 if(e.key === 'Enter') {
