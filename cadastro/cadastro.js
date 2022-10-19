@@ -41,11 +41,30 @@ function fnValidar(){
     
     document.getElementById("formSalvar").submit();
  }
- /*function mascara_cpf(){
+ function mascara_cpf(){
     var cpf = document.getElementById('CPF_Cliente')
     if(cpf.value.lenght == 3 || cpf.value.lenght == 7){
         cpf.value = cpf.value += "."
     }else if(cpf.value.lenght == 11){
         cpf.value = cpf.value += "-"
     }
- }*/
+    alert("funcionou");
+ }
+ function mascara_telefone(){
+    var cpf = document.getElementById('CPF_Cliente')
+    if(cpf.value.lenght == 1){
+        cpf.value = cpf.value += "("
+    }else if(cpf.value.lenght == 4){
+        cpf.value = cpf.value += ")"
+    }else if(cpf.value.lenght == 10){
+        cpf.value = cpf.value += "-"
+    }
+    alert("funcionou");
+ }
+//Função para caso apertar enter, o botão aceita o comando
+            /*document.addEventListener("keypress", function(e) {
+                if(e.key === 'Enter') {
+                    var btn = document.getElementById("btn");
+                    btn.click();
+                }
+});*/ 
