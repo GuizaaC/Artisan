@@ -1,3 +1,11 @@
+<?php
+if(isset($_POST['Email_Cliente'])){
+    include('salvar.php');
+    $Email_Cliente = $_POST['Email_Cliente'];
+    $Senha_Cliente = password_hash($_POST['Senha_Cliente'], PASSWORD_DEFAULT);
+    $mysqli->query("INSERT INTO Cliente (Email_Cliente, Senha_Cliente) VALUES('$Email_Cliente', '$Senha_Cliente')");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
