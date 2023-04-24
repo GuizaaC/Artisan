@@ -25,7 +25,7 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 // Deletar do banco
-$query = " DELETE FROM Cliente WHERE  Id_Cliente = '".$_GET["Id_Cliente"]."' ";
+$query = " DELETE FROM usuario WHERE  id_usuario = '".$_GET["id_usuario"]."' ";
 
 echo $query;
 mysqli_query($connection,$query) or die ('Erro ao Deletar..');

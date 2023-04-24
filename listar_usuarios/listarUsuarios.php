@@ -39,7 +39,7 @@
 	}
 
 //selecionando os campos do banco
-	$query = ' select Id_Cliente, Nome_Cliente from Cliente ';
+	$query = ' select id_usuario, nome_usuario from usuario ';
 	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
 	while ($rowp = mysqli_fetch_array($resp)) {		?>					
@@ -48,8 +48,8 @@
 	<UL>
 		<li class="lista ">
 		
-		<a href='../atualizar_perfil/atualizarperfil.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Editar<label/></a> 
-		<a href='../delete_cliente/delete.php?Id_Cliente=<?php echo $rowp["Id_Cliente"];  ?>'><label>Deletar<label/></a> </li><br> <br> 
+		<a href='../atualizar_perfil/atualizarperfil.php?id_usuario=<?php echo $rowp["id_usuario"];  ?>'><label>Editar<label/></a> 
+		<a href='../delete_cliente/delete.php?id_usuario=<?php echo $rowp["id_usuario"];  ?>'><label>Deletar<label/></a> </li><br> <br> 
 	
 		<main>
         <div class="list">
@@ -59,8 +59,8 @@
                         <img src="/assets/user-image.png" alt="" >
                     </div>
                     <div class="details">
-                        <h1 class="name"><?php echo $rowp["Nome_Cliente"]  ?></h1>
-                        <h3 class="username"><?php echo $rowp["Id_Cliente"]; ?></h3>
+                        <h1 class="name"><?php echo $rowp["nome_usuario"]  ?></h1>
+                        <h3 class="username"><?php echo $rowp["id_usuario"]; ?></h3>
                     </div>
                 </div>
                 <div class="status">
@@ -71,10 +71,10 @@
                     <p>Brasília</p>
                 </div>
                 <div class="phone">
-                    <p><?php echo $rowp["Telefone_Cliente"]; ?></p>
+                    <p><?php echo $rowp["telefone_usuario"]; ?></p>
                 </div>
                 <div class="contact">
-                    <a href="mailto:<?php echo $rowp["Email_Cliente"]  ?>" class="btn">Contact</a>
+                    <a href="mailto:<?php echo $rowp["email_usuario"]  ?>" class="btn">Contact</a>
                 </div>
                 <div class="action">
 					
