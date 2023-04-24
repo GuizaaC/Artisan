@@ -13,9 +13,9 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 //Comandos de transferencia(PHP - SQL)
-    $query = " INSERT INTO Produto
-        ( Nome_Produto, Preco_Produto, Descricao_Produto)
-    VALUES('".$_POST["Nome_Produto"]."', '".$_POST["Preco_Produto"]."', '".$_POST["Descricao_Produto"]."');";
+    $query = " INSERT INTO produto
+        ( nome_produto, preco_produto, descricao_produto, quantidade_produto)
+    VALUES('".$_POST["nome_produto"]."', '".$_POST["preco_produto"]."', '".$_POST["descricao_produto"]."', '".$_POST["quantidade_produto"]."');";
     /*  namespace Verot\Upload;
     $foo = new Upload($_FILES['Img_Cliente']); 
         if ($foo->uploaded) {

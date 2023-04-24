@@ -13,10 +13,10 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 //Comandos de transferencia(PHP - SQL)
-    $query = " INSERT INTO Cliente
-        ( Email_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, Cpf_Cliente, Data_Nascimento_Cliente, Senha_Cliente)
-    VALUES('".$_POST["Email_Cliente"]."', '".$_POST["Nome_Cliente"]."', '".$_POST["Endereco_Cliente"]."','".$_POST["Telefone_Cliente"]."', 
-        '".$_POST["Cpf_Cliente"]."', '".$_POST["Data_Nascimento_Cliente"]."','".$_POST["Senha_Cliente"]."');";
+    $query = " INSERT INTO usuario
+        (email_usuario , nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, senha_usuario)
+    VALUES('".$_POST["email_usuario"]."', '".$_POST["nome_usuario"]."', '".$_POST["endereco_usuario"]."','".$_POST["telefone_usuario"]."', 
+        '".$_POST["cpf_usuario"]."', '".$_POST["data_nascimento_usuario"]."',('".$_POST["senhaCriptografada"]."'));";
     /*  namespace Verot\Upload;
     $foo = new Upload($_FILES['Img_Cliente']); 
         if ($foo->uploaded) {
@@ -58,12 +58,12 @@
     mysqli_query($connection,$query) or die ('Erro ao salvar..');
     echo "Salvo com sucesso";
 
-        $query = " select Id_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, CPF_Cliente, Data_Nascimento_Cliente, Email_Cliente, Senha_Cliente from 
-        Cliente Where Email_Cliente = '".$_POST["Email_Cliente"]."' and Senha_Cliente = '".$_POST["Senha_Cliente"]."'" ;
+        $query = " select id_usuario, nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, email_usuario, senha_usuario from 
+        usuario Where email_usuario = '".$_POST["email_usuario"]."' and senha_usuario = '".$_POST["senha_usuario"]."'" ;
         $resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
         $_SESSION["logado"]=  "nao";
         while ($rowp = mysqli_fetch_array($resp)) {	        
-            $_SESSION["Id_Cliente"]=  $rowp["Id_Cliente"];   
+            $_SESSION["id_usuario"]=  $rowp["id_usuario"];   
         };
 
         ?>
