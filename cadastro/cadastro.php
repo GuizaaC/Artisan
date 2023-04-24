@@ -58,3 +58,4 @@ if(isset($_POST['Email_Cliente'])){
  <script src="/cadastro/cadastro.js"></script>
 </body>
 </html>
+<!-- teste de aprovação de commit -->
