@@ -15,7 +15,7 @@
 //Comandos de transferencia(PHP - SQL)
     $query = " INSERT INTO Produto
         ( Nome_Produto, Preco_Produto, Descricao_Produto)
-    VALUES('".$_POST["Nome_Produto"]."', '".$_POST["Preco_Produto"]."', '".$_POST["Descricao_Produto"]."');";
+    VALUES('".$_POST["nome_Produto"]."', '".$_POST["preco_Produto"]."', '".$_POST["descricao_Produto"]."');";
     /*  namespace Verot\Upload;
     $foo = new Upload($_FILES['Img_Cliente']); 
         if ($foo->uploaded) {

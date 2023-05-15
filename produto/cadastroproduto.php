@@ -1,3 +1,23 @@
+<?php
+if(isset($-POST['bt_enviar'])){
+    $tipos_permitidos = ['jpg', 'jpeg', 'gif', 'png', 'JPG', 'JPEG', 'GIF', 'PNG'];
+    $extensao = pathinfo($_FILES['img_produto']['name'], PATHINFO_EXTENSION);
+
+    if(in_array($extensao, $tipos_permitidos)){
+        $pasta = "imagens/";
+        $temporario = $_FILES['arquivo']['tmp_name'];
+        $novo_nome = uniqid().".$extensao";
+
+        if(move_uploaded_file($temporario, $pasta.$novo_nome)){
+            echo "<p>Upload realizado!</p>";
+        }else{
+            echo"<p>falha no Uploado!</p>";
+        }
+    }else{
+        echo "<p>Tipo do arquivo não é permitido!</p>"
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,15 +42,15 @@
     <form id="formSalvar" action='salvarproduto.php' method="POST" enctype = "multipart/form-data" onsubmit>
             <!-- Campo nome -->
             <label class="titulo">Nome do produto</label> <br>  
-                <input class="entrada" name='Nome_Produto' id="Nome_Produto" placeholder="Nome do produto" required> <br>
+                <input class="entrada" name='nome_Produto' id="nome_Produto" placeholder="Nome do produto" required> <br>
             <!-- Campo Preço -->
             <label class="titulo">Preço</label> <br>
-                <input class="entrada" name='Preco_Produto' id="Preco_Produto" placeholder="Preço" required>  <br>
+                <input class="entrada" name='preco_Produto' id="preco_Produto" placeholder="Preço" required>  <br>
             <!-- Campo Descrição -->
             <label class="titulo">Descrição</label> <br>
-                <input class="entrada"  name='Descricao_Produto' id="Descricao_Produto" placeholder="Coloque a descrição do produto"  required> <br>
+                <input class="entrada"  name='descricao_Produto' id="descricao_Produto" placeholder="Coloque a descrição do produto"  required> <br>
             <label class="titulo">Foto do produto</label>
-                        <input class = "imagem" type = "file" name = " Img_Produto"><br>
+                        <input class = "imagem" type = "file" name = " img_Produto"><br>
 
             <!-- Validação -->
             <input class="enviar" type=button id="btn" value="Enviar" onclick="fnValidar();">

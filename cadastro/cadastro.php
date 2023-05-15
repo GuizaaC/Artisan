@@ -3,6 +3,24 @@ if(isset($_POST['enviar'])){
     $senhaOriginal = $_POST['senha_usuario']
     $senhaCriptografada = md5($senhaOriginal)
 }
+if(isset($-POST['bt_enviar'])){
+    $tipos_permitidos = ['jpg', 'jpeg', 'gif', 'png', 'JPG', 'JPEG', 'GIF', 'PNG'];
+    $extensao = pathinfo($_FILES['img_usuario']['name'], PATHINFO_EXTENSION);
+
+    if(in_array($extensao, $tipos_permitidos)){
+        $pasta = "imagens/";
+        $temporario = $_FILES['arquivo']['tmp_name'];
+        $novo_nome = uniqid().".$extensao";
+
+        if(move_uploaded_file($temporario, $pasta.$novo_nome)){
+            echo "<p>Upload realizado!</p>";
+        }else{
+            echo"<p>falha no Uploado!</p>";
+        }
+    }else{
+        echo "<p>Tipo do arquivo não é permitido!</p>"
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +66,7 @@ if(isset($_POST['enviar'])){
             <label class="titulo">Senha</label>
                 <input class="entrada" type="password" min="5" max="10" name="senha_usuario" id="senha_usuario" placeholder="Senha" required><br>
             <label class="titulo">Foto do perfil</label>
-                        <input class = "imagem" type = "file" name = " Img_Cliente"><br>
+                        <input class = "imagem" type = "file" name = " img_usuario"><br>
 
             <!-- Validação -->
             <input class="enviar" type=button id="btn" value="Enviar" onclick="fnValidar();">
