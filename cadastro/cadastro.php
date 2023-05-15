@@ -3,22 +3,20 @@ if(isset($_POST['enviar'])){
     $senhaOriginal = $_POST['senha_usuario']
     $senhaCriptografada = md5($senhaOriginal)
 }
-if(isset($-POST['bt_enviar'])){
-    $tipos_permitidos = ['jpg', 'jpeg', 'gif', 'png', 'JPG', 'JPEG', 'GIF', 'PNG'];
-    $extensao = pathinfo($_FILES['img_usuario']['name'], PATHINFO_EXTENSION);
+$msg = false;
+if(isset($_FILES['img_usuario'])){
+    $extensao = strtolower(substr($_FILES['img_usuario']['name'], -4));
+    $novo_nome = md5(time()) .$extensao;
+    $diretorio = "imagens/"
 
-    if(in_array($extensao, $tipos_permitidos)){
-        $pasta = "imagens/";
-        $temporario = $_FILES['arquivo']['tmp_name'];
-        $novo_nome = uniqid().".$extensao";
+    move_uploaded_file($_FILES['img_usuario']['tmp_name'], $diretorio.$novo_nome);
 
-        if(move_uploaded_file($temporario, $pasta.$novo_nome)){
-            echo "<p>Upload realizado!</p>";
-        }else{
-            echo"<p>falha no Uploado!</p>";
-        }
+    $sql_code = "INSERT INTO usuario (img_usuario) VALUES ('$novo_nome')";
+
+    if($mysqli->query($sql_code)){
+        $msg = " Arquivo enviado com sucesso!";
     }else{
-        echo "<p>Tipo do arquivo não é permitido!</p>"
+        $msg = "Falha ao enviar arquivo.";
     }
 }
 ?>
