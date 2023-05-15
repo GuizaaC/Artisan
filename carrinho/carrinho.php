@@ -30,7 +30,7 @@
 
             <!-- Validação -->
             <input class="enviar" type=button id="btn" value="Enviar" onclick="fnValidar();">
-    <input class="entrada" type="hidden" name="Id_Produto" id="Id_Produto" value="<?php echo $_POST["Id_Produto"]; ?>"><br>
+    <input class="entrada" type="hidden" name="id_Produto" id="id_Produto" value="<?php echo $_POST["id_Produto"]; ?>"><br>
         
 
 <input class="enviar" type=button value="Enviar" onclick="fnValidar();">
