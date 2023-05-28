@@ -36,10 +36,7 @@
     </div>
 
     <div class="tarja">
-        Somos uma loja especializada na comercialização do autêntico e criativo artesanato brasileiro. 
-        Procuramos trabalhar diretamente com os artesãos, valorizando seu trabalho, conseguindo assim uma 
-        remuneração mais justa para quem produz as peças e um melhor preço para quem aprecia e compra sua arte.
-        <a href="/home/sobrenos.php">sobre nós!</a>
+        
     </div>
 
     <div class="gap">
@@ -47,8 +44,7 @@
     </div>
 
     <div class="tarja">
-        Contamos com diversos produtos, deem uma olhada na loja e busque o que mais se encaixa para você!
-        <a href="/home/produtos.php">Produtos</a>
+        
     </div>
 
     <footer>
@@ -58,3 +54,6 @@
 </body>
 
 </html>
+
+
+
