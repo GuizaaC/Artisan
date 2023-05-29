@@ -27,12 +27,17 @@
         </header>
 
         <h1>
-            Produtos artesanais feitos para você!
+            Confira os nossos produtos!
         </h1>
     </div>
 
     <div id="primeiro_bg">
-        
+        <h1 class="name"><?php echo $rowp["nome_produto"]  ?></h1>
+        <h3 class="id"><?php echo $rowp["id_produto"]; ?></h3>
+        <h3 class="preco"><?php echo $rowp["preco_produto"]; ?></h3>
+        <h3 class="descricao"><?php echo $rowp["descricao_produto"]; ?></h3>
+        <h3 class="quantidade"><?php echo $rowp["quantidade_produto"]; ?></h3>
+        <a href="/carrinho/carrinho.php">Adicionar ao carrinho</a>
     </div>
 
     <div class="tarja">

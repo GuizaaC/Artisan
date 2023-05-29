@@ -18,13 +18,13 @@
     
 <br> <br><br>
     <div class="container">
-<form id="formSalvar" action='salvar.php' method="POST" onsubmit>
+<form id="formSalvar" action='validarLogin.php' method="POST" onsubmit>
     <label for="produto1">Produto 1</label>
     <input type="checkbox" name="produtos[]" value="produto1">
     <label for="quantidade1">Quantidade:</label>
     <input type="number" name="quantidades[]" value="1">
 
-  <button type="submit">Adicionar ao carrinho</button>
+  <button type="submit">Finalizar compra</button>
 </form>
 
 
