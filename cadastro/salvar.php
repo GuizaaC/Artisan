@@ -19,42 +19,27 @@
         (email_usuario , nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, senha_usuario)
     VALUES('".$_POST["email_usuario"]."', '".$_POST["nome_usuario"]."', '".$_POST["endereco_usuario"]."','".$_POST["telefone_usuario"]."', 
         '".$_POST["cpf_usuario"]."', '".$_POST["data_nascimento_usuario"]."',('".$_POST["senha_usuario"]."'));";
-    /*  namespace Verot\Upload;
-    $foo = new Upload($_FILES['Img_Cliente']); 
-        if ($foo->uploaded) {
-        // save uploaded image with no changes
-        $foo->process('/imagem_cliente');
-        if ($foo->processed) {
-            echo 'Imagem original copiada';
-        } else {
-            echo 'error : ' . $foo->error;
+        
+        if(isset($_POST['enviar'])){
+            $senhaOriginal = $_POST['senha_usuario']
+            $senhaCriptografada = md5($senhaOriginal)
         }
-        // save uploaded image with a new name
-        $foo->file_new_name_body = 'foo';
-        $foo->process('/imagens');
-        if ($foo->processed) {
-            echo 'image renamed "foo" copied';
-        } else {
-            echo 'error : ' . $foo->error;
-        }   
-        // save uploaded image with a new name
-
-        $foo->file_new_name_body = 'image_resized';
-        $foo->image_resize = true;
-        $foo->image_convert = 'jpg';
-        $foo->image_x = 56;
-        $foo->image_y = 56;
-        $foo->image_ratio_y = true;
-        $foo->process('/imagem_cliente');
-        if ($foo->processed) {
-            echo 'image renamed, resized x=56, resized y=56
-                and converted to jpg';
-            $foo->clean();
-        } else {
-            echo 'error : ' . $foo->error;
-        } 
-    }  */
-
+        $msg = false;
+        if(isset($_FILES['img_usuario'])){
+            $extensao = strtolower(substr($_FILES['img_usuario']['name'], -4));
+            $novo_nome = md5(time()) .$extensao;
+            $diretorio = "imagens/"
+        
+            move_uploaded_file($_FILES['img_usuario']['tmp_name'], $diretorio.$novo_nome);
+        
+            $sql_code = "INSERT INTO usuario (img_usuario) VALUES ('$novo_nome')";
+        
+            if($mysqli->query($sql_code)){
+                $msg = " Arquivo enviado com sucesso!";
+            }else{
+                $msg = "Falha ao enviar arquivo.";
+            }
+        }
 //Confirmação do salvamento
     echo $query;
     mysqli_query($connection,$query) or die ('Erro ao salvar..');
