@@ -8,6 +8,11 @@
 // Criação de conexão
     $connection = mysqli_connect($servername, $username, $password, $database);
 
+
+if(isset($_POST['enviar'])){
+    $senhaOriginal = $_POST['senha_usuario']
+    $senhaCriptografada = md5($senhaOriginal)
+}
 // Checagem de conexão
     if (!$connection) {
         die("Connection failed: " . mysqli_connect_error());
