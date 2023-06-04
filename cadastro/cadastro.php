@@ -1,25 +1,4 @@
-<?php
-if(isset($_POST['enviar'])){
-    $senhaOriginal = $_POST['senha_usuario']
-    $senhaCriptografada = md5($senhaOriginal)
-}
-$msg = false;
-if(isset($_FILES['img_usuario'])){
-    $extensao = strtolower(substr($_FILES['img_usuario']['name'], -4));
-    $novo_nome = md5(time()) .$extensao;
-    $diretorio = "imagens/"
 
-    move_uploaded_file($_FILES['img_usuario']['tmp_name'], $diretorio.$novo_nome);
-
-    $sql_code = "INSERT INTO usuario (img_usuario) VALUES ('$novo_nome')";
-
-    if($mysqli->query($sql_code)){
-        $msg = " Arquivo enviado com sucesso!";
-    }else{
-        $msg = "Falha ao enviar arquivo.";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

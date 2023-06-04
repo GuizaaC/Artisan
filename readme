@@ -1,2 +1,24 @@
 Artisan se trata de um projeto feito em aula, que consiste em um sistema de gerenciamento de estoque de estabelecimentos destinados a artesanato.
 o mesmo possui conexão com banco de dados de clientes e funcionários, sistema de pedidos de matérias primas e venda de produtos.
+<?php
+if(isset($_POST['enviar'])){
+    $senhaOriginal = $_POST['senha_usuario']
+    $senhaCriptografada = md5($senhaOriginal)
+}
+$msg = false;
+if(isset($_FILES['img_usuario'])){
+    $extensao = strtolower(substr($_FILES['img_usuario']['name'], -4));
+    $novo_nome = md5(time()) .$extensao;
+    $diretorio = "imagens/"
+
+    move_uploaded_file($_FILES['img_usuario']['tmp_name'], $diretorio.$novo_nome);
+
+    $sql_code = "INSERT INTO usuario (img_usuario) VALUES ('$novo_nome')";
+
+    if($mysqli->query($sql_code)){
+        $msg = " Arquivo enviado com sucesso!";
+    }else{
+        $msg = "Falha ao enviar arquivo.";
+    }
+}
+?>
