@@ -18,7 +18,7 @@
     $query = " INSERT INTO usuario
         (email_usuario , nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, senha_usuario)
     VALUES('".$_POST["email_usuario"]."', '".$_POST["nome_usuario"]."', '".$_POST["endereco_usuario"]."','".$_POST["telefone_usuario"]."', 
-        '".$_POST["cpf_usuario"]."', '".$_POST["data_nascimento_usuario"]."',('".$_POST["senhaCriptografada"]."'));";
+        '".$_POST["cpf_usuario"]."', '".$_POST["data_nascimento_usuario"]."',('".$_POST["senha_usuario"]."'));";
     /*  namespace Verot\Upload;
     $foo = new Upload($_FILES['Img_Cliente']); 
         if ($foo->uploaded) {
