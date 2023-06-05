@@ -38,6 +38,6 @@ while ($rowp = mysqli_fetch_array($resp)) {
 ?>
 
 <script>
-    window.location = '../home/produtos.php';
+    window.location = '../home/home.php';
 </script>
 

@@ -1,23 +1,3 @@
-<?php
-if(isset($-POST['bt_enviar'])){
-    $tipos_permitidos = ['jpg', 'jpeg', 'gif', 'png', 'JPG', 'JPEG', 'GIF', 'PNG'];
-    $extensao = pathinfo($_FILES['img_produto']['name'], PATHINFO_EXTENSION);
-
-    if(in_array($extensao, $tipos_permitidos)){
-        $pasta = "imagens/";
-        $temporario = $_FILES['arquivo']['tmp_name'];
-        $novo_nome = uniqid().".$extensao";
-
-        if(move_uploaded_file($temporario, $pasta.$novo_nome)){
-            echo "<p>Upload realizado!</p>";
-        }else{
-            echo"<p>falha no Uploado!</p>";
-        }
-    }else{
-        echo "<p>Tipo do arquivo não é permitido!</p>"
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
