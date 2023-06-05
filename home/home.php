@@ -15,10 +15,10 @@
      <div id="primeira_tela">
         <header class="topo">
 
-            <p>Serviço</p>
+            <a href="/produto/cadastroproduto.php">Cadastrar Produto</a>
             <a href="/home/produtos.php">Produtos</a>
             <img src="./assets/Logo.png" alt="Logo" class="logo">
-            <p>Equipe</p>
+            <a href="/listar_usuarios/listarUsuarios.php">lista de usuarios</a>
             <p>Contato</p>
 
             <a href="/login/login.html" id="entrar">
@@ -36,12 +36,7 @@
     </div>
 
     <div class="tarja">
-        <h1 class="name"><?php echo $rowp["nome_produto"]  ?></h1>
-        <h3 class="id"><?php echo $rowp["id_produto"]; ?></h3>
-        <h3 class="preco"><?php echo $rowp["preco_produto"]; ?></h3>
-        <h3 class="descricao"><?php echo $rowp["descricao_produto"]; ?></h3>
-        <h3 class="quantidade"><?php echo $rowp["quantidade_produto"]; ?></h3>
-        <a href="/carrinho/carrinho.php">Adicionar ao carrinho</a>
+        
     </div>
 
     <div class="gap">
@@ -59,6 +54,3 @@
 </body>
 
 </html>
-
-
-
