@@ -18,22 +18,17 @@
     
 <br> <br><br>
     <div class="container">
-<form id="formSalvar" action='validarLogin.php' method="POST" onsubmit>
+<form id="formSalvar" action='finalizarcompra.php' method="POST" onsubmit>
     <label for="produto1">Produto 1</label>
     <input type="checkbox" name="produtos[]" value="produto1">
     <label for="quantidade1">Quantidade:</label>
     <input type="number" name="quantidades[]" value="1">
 
-  <button type="submit">Finalizar compra</button>
+    <input class="Finzalizar" type=button id="btnFC" value="Finalizar Compra" onclick="fnFinalizar();">
 </form>
 
 
-            <!-- Validação -->
-            <input class="enviar" type=button id="btn" value="Enviar" onclick="fnValidar();">
-    <input class="entrada" type="hidden" name="id_Produto" id="id_Produto" value="<?php echo $_POST["id_Produto"]; ?>"><br>
         
-
-<input class="enviar" type=button value="Enviar" onclick="fnValidar();">
 
 <a href="resultadoConsulta.php">listar Produtos</a>
 </form> 
