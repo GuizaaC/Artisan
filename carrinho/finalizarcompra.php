@@ -4,7 +4,7 @@ session_start(); // Inicia a sessão (se já não estiver iniciada)
 // Verifica se o usuário está logado
 if ($_SESSION["logado"] !== "sim") {
     // Usuário não está logado, redirecione para a página de login ou exiba uma mensagem de erro.
-    header("../cadastro/cadastro.php"); // Redireciona para a página de login
+    header("Location: /cadastro/cadastro.php"); // Redireciona para a página de login
     exit; // Encerra a execução do script atual
 }
 
@@ -43,7 +43,15 @@ while ($rowp = mysqli_fetch_array($resp)) {
 }
 
 mysqli_close($connection);
+
+// Armazena a mensagem de sucesso na sessão
+$_SESSION['compra_finalizada'] = true;
+
+// Redireciona o usuário de volta para a página inicial
+header('Location: /carrinho/carrinho.php');
+exit;
 ?>
+
 
 
     <script>
