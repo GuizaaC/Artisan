@@ -11,56 +11,58 @@
 
 <body>
 
-    <header class="topo"><img src="../assets/Logo.png" alt="Logo" class="logo">
-        <a href="../index.html">
-            <button class="voltar">Voltar</button>
-        </a>
-    </header>
-    <?php
-//DB Info
-	$servername = "localhost";
-	$database = "u553234134_Artisan";
-	$username = "u553234134_Gizaac";
-	$password = "Gizaac12343124";
+<header class="topo"><img src="../assets/Logo.png" alt="Logo" class="logo">
+    <a href="../index.html">
+        <button class="voltar">Voltar</button>
+    </a>
+</header>
+
+<?php
+// Database Info
+$servername = "localhost";
+$database = "u553234134_Artisan";
+$username = "u553234134_Gizaac";
+$password = "Gizaac12343124";
 
 // Create connection
-	$connection = mysqli_connect($servername, $username, $password, $database);
-        if (!$connection) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
-//seleção de campos
-	$query = " select Id_Cliente, Nome_Cliente, Endereco_Cliente, Telefone_Cliente, CPF_Cliente, Data_Nascimento_Cliente, Email_Cliente, Senha_Cliente from 
-    Cliente Where Email_Cliente = '".$_POST["Email_Cliente"]."' and Senha_Cliente = '".$_POST["Senha_Cliente"]."'" ;
-	$resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
-    $_SESSION["logado"]=  "nao";
-	while ($rowp = mysqli_fetch_array($resp)) {	
-        $logado=  "sim";
-        $_SESSION["Id_Cliente"]=  $rowp["Id_Cliente"];
+$connection = mysqli_connect($servername, $username, $password, $database);
+if (!$connection) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Seleção de campos
+$query = "SELECT id_usuario, nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, email_usuario, senha_usuario
+FROM usuario
+WHERE email_usuario = '" . $_POST["Email_Cliente"] . "' AND senha_usuario = '" . md5($_POST["Senha_Cliente"]) . "'";
+$resp = mysqli_query($connection, $query) or die('Erro ao consultar..');
+
+$_SESSION["logado"] = "nao";
+while ($rowp = mysqli_fetch_array($resp)) {
+    $_SESSION["Id_Cliente"] = $rowp["id_usuario"];
+    $logado = "sim";
 ?>
-Logado com sucesso:<?php echo $rowp["Nome_Cliente"]; ?>
-    <?php      
-    };
-    if ( $logado != "sim"){
-   
-        ?>
-        <script>
-            alert('Usuário ou senha inválidos.');
-            window.location='../login/login.html';
-        </script>
 
-   <?php  
-    }else {
-        $_SESSION["logado"]="sim";
-        ?>
-        <script>
-            alert('Usuário logado com sucesso.');
-            window.location='../listar_usuarios/listarUsuarios.php';
-        </script>
+    Logado com sucesso:<?php echo $rowp["nome_usuario"]; ?>
 
-   <?php 
-    }
+<?php
+}
+if ($logado != "sim") {
     ?>
-
+    <script>
+        alert('Usuário ou senha inválidos.');
+        window.location = '../login/login.html';
+    </script>
+    <?php
+} else {
+    $_SESSION["logado"] = "sim";
+    ?>
+    <script>
+        alert('Usuário logado com sucesso.');
+        window.location = '../listar_usuarios/listarUsuarios.php';
+    </script>
+    <?php
+}
+?>
 
 </body>
 </html>
