@@ -71,7 +71,12 @@
                                     <p class="descricao_produto"><?php echo $rowp["descricao_produto"]; ?></p>
                                 </div>
                                 <div class="adicionar_carrinho">
-                                    <button onclick="adicionarAoCarrinho(<?php echo $rowp['id_produto']; ?>, <?php echo $rowp['preco_produto']; ?>)">Adicionar ao Carrinho</button>
+                                    <form action="adicionarcarrinho.php" method="post">
+                                        <input type="hidden" name="id_usuario" value="<?php echo $rowp['id_usuario']; ?>"> <!-- Supondo que o ID do usuário logado seja 1 -->
+                                        <input type="hidden" name="id_produto" value="<?php echo $rowp['id_produto']; ?>">
+                                        <input type="hidden" name="preco_produto" value="<?php echo $rowp['preco_produto']; ?>">
+                                        <button type="submit">Adicionar ao Carrinho</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -85,38 +90,10 @@
 
     </div>
 
-    <script>
-        function adicionarAoCarrinho(produtoId, precoProduto) {
-            // Fazer uma requisição para adicionar o produto ao carrinho
-            // Você pode usar a função fetch() para isso
-
-            // Exemplo de requisição POST usando fetch():
-            fetch('adicionar_carrinho.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    produtoId: produtoId,
-                    precoProduto: precoProduto
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                // A resposta da requisição será processada aqui
-                // Você pode exibir uma mensagem de sucesso ou redirecionar o usuário para a página do carrinho
-                console.log(data);
-            })
-            .catch(error => {
-                // Em caso de erro na requisição, você pode exibir uma mensagem de erro ao usuário
-                console.error('Erro:', error);
-            });
-        }
-    </script>
-
 </body>
 
 </html>
+
 
 
 
