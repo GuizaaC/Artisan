@@ -26,7 +26,7 @@
 
             <!-- Campo preco_produto -->
             <label class="titulo" for="preco_produto">Preço</label> <br>
-            <input class="entrada" type="number" name="preco_produto" id="preco_produto" placeholder="Preço" min="0" required>  <br>
+            <input class="entrada" type="number" name="preco_produto" id="preco_produto" placeholder="Preço" min="1" required>  <br>
 
             <!-- Campo descricao_produto -->
             <label class="titulo" for="descricao_produto">Descrição</label> <br>
@@ -34,7 +34,7 @@
 
             <!-- Campo quantidade_produto -->
             <label class="titulo" for="quantidade_produto">Quantidade</label> <br>
-            <input class="entrada" type="number" name="quantidade_produto" id="quantidade_produto" placeholder="Quantidade" min="0" required> <br>
+            <input class="entrada" type="number" name="quantidade_produto" id="quantidade_produto" placeholder="Quantidade" min="1" required> <br>
 
             <!-- Campo img_produto -->
             <label class="titulo" for="img_produto">Foto do produto</label>

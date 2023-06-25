@@ -69,8 +69,11 @@
         <div class="quantidade_produto">
             <p class="quantidade_produto">Quantidade: <?php echo $rowp["quantidade_produto"]; ?></p>
         </div>
-        <div class="contact">
-            <p class="product-description"><?php echo $rowp["descricao_produto"]; ?></p>
+        <div class="descricao_produto">
+            <p class="descricao_produto"><?php echo $rowp["descricao_produto"]; ?></p>
+        </div>
+        <div class="adicionar_carrinho">
+            <button onclick="adicionarAoCarrinho(<?php echo $rowp['id_produto']; ?>, <?php echo $rowp['preco_produto']; ?>)">Adicionar ao Carrinho</button>
         </div>
     </div>
 </div>
@@ -82,7 +85,35 @@
     ?>
 
 </div>
+<script>
+    // Função para adicionar ao carrinho
+    function adicionarAoCarrinho(id, preco) {
+      // Verificar se o carrinho já existe no armazenamento local (localStorage)
+      let carrinho = localStorage.getItem('carrinho');
+      if (!carrinho) {
+        // Se o carrinho não existir, criar um array vazio
+        carrinho = [];
+      } else {
+        // Se o carrinho existir, converter o JSON em um array
+        carrinho = JSON.parse(carrinho);
+      }
 
+      // Criar um objeto com as informações do produto
+      const produto = {
+        id: id,
+        preco: preco
+      };
+
+      // Adicionar o produto ao carrinho
+      carrinho.push(produto);
+
+      // Armazenar o carrinho atualizado no localStorage
+      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+      // Exibir uma mensagem ou redirecionar para a página do carrinho, se necessário
+      alert('Produto adicionado ao carrinho!');
+    }
+  </script>
 </body>
 </html>
 
