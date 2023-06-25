@@ -86,19 +86,33 @@
 
 </div>
 <script>
-var carrinhoDeCompras = [];
+        function adicionarAoCarrinho(produtoId, precoProduto) {
+            // Fazer uma requisição para adicionar o produto ao carrinho
+            // Você pode usar a função fetch() para isso
 
-function adicionarAoCarrinho(idProduto, precoProduto) {
-  var produto = {
-    id: idProduto,
-    preco: precoProduto
-  };
-
-  carrinhoDeCompras.push(produto);
-
-  console.log("Produto adicionado ao carrinho:", produto);
-}
-</script>
+            // Exemplo de requisição POST usando fetch():
+            fetch('adicionar_carrinho.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    produtoId: produtoId,
+                    precoProduto: precoProduto
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // A resposta da requisição será processada aqui
+                // Você pode exibir uma mensagem de sucesso ou redirecionar o usuário para a página do carrinho
+                console.log(data);
+            })
+            .catch(error => {
+                // Em caso de erro na requisição, você pode exibir uma mensagem de erro ao usuário
+                console.error('Erro:', error);
+            });
+        }
+    </script>
 </body>
 </html>
 
