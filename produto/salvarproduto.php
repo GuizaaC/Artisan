@@ -1,4 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 
 // Dados do banco
@@ -16,46 +20,42 @@ if (!$connection) {
 }
 
 // Verifica se um arquivo de imagem foi enviado
-if (isset($_FILES['img_produto']) && $_FILES['img_produto']['error'] === UPLOAD_ERR_OK) {
-    $targetDir = 'assets'; 
-    $targetFile = $targetDir . basename($_FILES['img_produto']['name']);
+if (isset($_FILES['img_usuario']) && $_FILES['img_usuario']['error'] === UPLOAD_ERR_OK) {
+    $targetDir = 'assets';  // Substitua pelo caminho real do diretório
+    $targetFile = $targetDir . basename($_FILES['img_usuario']['name']);
     $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
     // Verifica se o arquivo é uma imagem válida
     $allowedExtensions = array('jpg', 'jpeg', 'png');
     if (in_array($imageFileType, $allowedExtensions)) {
         // Move o arquivo para o diretório de destino
-        if (move_uploaded_file($_FILES['img_produto']['tmp_name'], $targetFile)) {
+        if (move_uploaded_file($_FILES['img_usuario']['tmp_name'], $targetFile)) {
             // Caminho da imagem para salvar no banco de dados
-            $imgProduto = $targetFile;
+            $imgUsuario = $targetFile;
+
+            // Aplicar criptografia MD5 à senha
+            $senhaCriptografada = md5($_POST["senha_usuario"]);
 
             // Comandos de transferência (PHP - SQL)
-            $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, quantidade_produto, img_produto)
-                      VALUES (?, ?, ?, ?, ?)";
+            $query = "INSERT INTO usuario (email_usuario, nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, senha_usuario, img_usuario)
+                      VALUES ('".$_POST["email_usuario"]."', '".$_POST["nome_usuario"]."', '".$_POST["endereco_usuario"]."', '".$_POST["telefone_usuario"]."', 
+                      '".$_POST["cpf_usuario"]."', '".$_POST["data_nascimento_usuario"]."', '".$senhaCriptografada."', '".$imgUsuario."');";
 
-            $stmt = mysqli_prepare($connection, $query);
-            if ($stmt) {
-                // Sanitiza os dados antes de vinculá-los aos parâmetros do statement
-                $nome_produto = sanitize($_POST["nome_produto"]);
-                $preco_produto = sanitize($_POST["preco_produto"]);
-                $descricao_produto = sanitize($_POST["descricao_produto"]);
-                $quantidade_produto = sanitize($_POST["quantidade_produto"]);
+            // Confirmação do salvamento
+            mysqli_query($connection, $query) or die ('Erro ao salvar: ' . mysqli_error($connection));
+            echo "Salvo com sucesso";
 
-                // Vincula os parâmetros aos placeholders na consulta
-                mysqli_stmt_bind_param($stmt, "sssss", $nome_produto, $preco_produto, $descricao_produto, $quantidade_produto, $imgProduto);
+            $query = "SELECT id_usuario, nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, email_usuario, senha_usuario 
+                      FROM usuario 
+                      WHERE email_usuario = '".$_POST["email_usuario"]."' AND senha_usuario = '".$senhaCriptografada."';";
 
-                // Executa o statement
-                if (mysqli_stmt_execute($stmt)) {
-                    echo "Produto salvo com sucesso";
-                    mysqli_stmt_close($stmt);
-                } else {
-                    die('Erro ao salvar produto.');
-                }
-            } else {
-                die('Erro na preparação da consulta.');
+            $resp = mysqli_query($connection, $query) or die ('Erro ao consultar: ' . mysqli_error($connection));
+            $_SESSION["logado"] = "nao";
+            while ($rowp = mysqli_fetch_array($resp)) {
+                $_SESSION["id_usuario"] = $rowp["id_usuario"];
             }
 
-            echo '<script>window.location = "../home/produtos.php";</script>';
+            echo '<script>window.location = "../home/home.php";</script>';
 
         } else {
             echo "Erro ao fazer upload do arquivo.";
@@ -69,3 +69,4 @@ if (isset($_FILES['img_produto']) && $_FILES['img_produto']['error'] === UPLOAD_
 
 mysqli_close($connection);
 ?>
+
