@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Dados do banco
 $servername = "localhost";
 $database = "u553234134_Artisan";
@@ -13,44 +15,57 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Função para validar e sanitizar os dados recebidos via POST
-function sanitize($data) {
-    // Implemente a sanitização apropriada para os dados
-    // por exemplo, você pode usar mysqli_real_escape_string() ou outras funções de filtragem
-    // certifique-se de aplicar a função sanitize() a todos os campos necessários antes de usá-los na consulta SQL
-    return $data;
-}
+// Verifica se um arquivo de imagem foi enviado
+if (isset($_FILES['img_produto']) && $_FILES['img_produto']['error'] === UPLOAD_ERR_OK) {
+    $targetDir = 'assets'; 
+    $targetFile = $targetDir . basename($_FILES['img_produto']['name']);
+    $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
-//Comandos de transferencia(PHP - SQL)
-$query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, quantidade_produto, img_produto) 
-          VALUES (?, ?, ?, ?, ?)";
+    // Verifica se o arquivo é uma imagem válida
+    $allowedExtensions = array('jpg', 'jpeg', 'png');
+    if (in_array($imageFileType, $allowedExtensions)) {
+        // Move o arquivo para o diretório de destino
+        if (move_uploaded_file($_FILES['img_produto']['tmp_name'], $targetFile)) {
+            // Caminho da imagem para salvar no banco de dados
+            $imgProduto = $targetFile;
 
-$stmt = mysqli_prepare($connection, $query);
-if ($stmt) {
-    // Sanitiza os dados antes de vinculá-los aos parâmetros do statement
-    $nome_produto = sanitize($_POST["nome_produto"]);
-    $preco_produto = sanitize($_POST["preco_produto"]);
-    $descricao_produto = sanitize($_POST["descricao_produto"]);
-    $quantidade_produto = sanitize($_POST["quantidade_produto"]);
-    $img_produto = sanitize($_POST["img_produto"]);
+            // Comandos de transferência (PHP - SQL)
+            $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, quantidade_produto, img_produto)
+                      VALUES (?, ?, ?, ?, ?)";
 
-    // Vincula os parâmetros aos placeholders na consulta
-    mysqli_stmt_bind_param($stmt, "ssssi", $nome_produto, $preco_produto, $descricao_produto, $quantidade_produto, $img_produto);
+            $stmt = mysqli_prepare($connection, $query);
+            if ($stmt) {
+                // Sanitiza os dados antes de vinculá-los aos parâmetros do statement
+                $nome_produto = sanitize($_POST["nome_produto"]);
+                $preco_produto = sanitize($_POST["preco_produto"]);
+                $descricao_produto = sanitize($_POST["descricao_produto"]);
+                $quantidade_produto = sanitize($_POST["quantidade_produto"]);
 
-    // Executa o statement
-    if (mysqli_stmt_execute($stmt)) {
-        echo "Salvo com sucesso";
-        mysqli_stmt_close($stmt);
+                // Vincula os parâmetros aos placeholders na consulta
+                mysqli_stmt_bind_param($stmt, "sssss", $nome_produto, $preco_produto, $descricao_produto, $quantidade_produto, $imgProduto);
+
+                // Executa o statement
+                if (mysqli_stmt_execute($stmt)) {
+                    echo "Produto salvo com sucesso";
+                    mysqli_stmt_close($stmt);
+                } else {
+                    die('Erro ao salvar produto.');
+                }
+            } else {
+                die('Erro na preparação da consulta.');
+            }
+
+            echo '<script>window.location = "../home/produtos.php";</script>';
+
+        } else {
+            echo "Erro ao fazer upload do arquivo.";
+        }
     } else {
-        die('Erro ao salvar..');
+        echo "Apenas arquivos JPG, JPEG e PNG são permitidos.";
     }
 } else {
-    die('Erro na preparação da consulta.');
+    echo "Nenhum arquivo de imagem foi enviado.";
 }
 
 mysqli_close($connection);
-
-// Redireciona o usuário para "../home/produtos.php"
-header("Location: ../home/produtos.php");
-exit();
 ?>
