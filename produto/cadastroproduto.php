@@ -19,7 +19,7 @@
     
     <br> <br><br>
     <div class="container">
-        <form id="formSalvar" action="salvarproduto.php" method="POST" enctype="multipart/form-data" onsubmit="return fnValidar();">
+        <form id="formSalvar" action="salvarproduto.php" method="POST" enctype="multipart/form-data">
             <!-- Campo nome_produto -->
             <label class="titulo" for="nome_produto">Nome do produto</label> <br>  
             <input class="entrada" type="text" name="nome_produto" id="nome_produto" placeholder="Nome do produto" required> <br>
