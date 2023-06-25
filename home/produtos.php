@@ -36,8 +36,7 @@
         }
 
         // selecionando os campos do banco
-        $query = 'SELECT id_produto, nome_produto, preco_produto, descricao_produto, quantidade_produto, img_produto FROM produto';
-        $query = 'SELECT id_usuario FROM usuario';
+        $query = 'SELECT  nome_produto, preco_produto, descricao_produto, quantidade_produto, img_produto FROM produto';
         $resp = mysqli_query($connection, $query) or die('Erro ao consultar..');
 
         while ($rowp = mysqli_fetch_array($resp)) {
@@ -73,9 +72,6 @@
                                 </div>
                                 <div class="adicionar_carrinho">
                                     <form action="finalizarcompra.php" method="post">
-                                        <input type="hidden" name="id_usuario" value="<?php echo $rowp['id_usuario']; ?>"> 
-                                        <input type="hidden" name="id_produto" value="<?php echo $rowp['id_produto']; ?>">
-                                        <input type="hidden" name="preco_produto" value="<?php echo $rowp['preco_produto']; ?>">
                                         <button type="submit">Comprar</button>
                                     </form>
                                 </div>
