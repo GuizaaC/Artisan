@@ -19,7 +19,7 @@
             <a href="/produto/cadastroproduto.php">Cadastrar Produto</a>
             <a href="/home/produtos.php">Produtos</a>
             <img src="./assets/Logo.png" alt="Logo" class="logo">
-            <a href="/home/sobrenos.php">Sobre Nós</a>
+            <a href="/listar_usuarios/listarUsuarios.php">lista de usuarios</a>
             <p>Contato</p>
 
             <a href="/login/login.html" id="entrar">

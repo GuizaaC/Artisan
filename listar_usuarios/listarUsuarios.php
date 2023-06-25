@@ -13,7 +13,7 @@
 <body>
 <!-- cabeçalho -->
 <header class="topo">
-    <a href="../home/home.php">
+    <a href="../home/homeadmin.php">
         <img src="../assets/Logo.png" alt="Logo" class="logo">
     </a>
 </header>
