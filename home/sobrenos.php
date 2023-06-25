@@ -11,12 +11,9 @@
     </head>
     <body>
         <header class="topo">
-            <p>Serviços</p>
             <p>Produtos</p>
             <img src="./assets/Logo.png" alt="Logo" class="logo">
-            <p>Equipe</p>
-            <p>Contato</p>
-            <a href="/login/login.html" id="entrar">
+            <a href="/login/login.html" id="entrar">Login</a>
             <button onClick = "window.location ='./login/login.html';" class="login">Entrar</button>
         </a>
     </header>
