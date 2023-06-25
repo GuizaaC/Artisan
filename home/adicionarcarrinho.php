@@ -15,7 +15,7 @@ if (!$connection) {
 // Verificando se os dados foram enviados via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Obtendo os dados do produto a ser adicionado ao carrinho
-    $usuarioId = $_POST['id_usuario']
+    $usuarioId = $_POST['id_usuario'];
     $produtoId = $_POST['id_produto'];
     $precoProduto = $_POST['preco_produto'];
 
@@ -23,9 +23,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Por exemplo, pode ser necessário obter o ID do usuário logado para vincular o produto ao carrinho dele
     // Você também precisará calcular o preço total do carrinho e atualizá-lo na tabela "carrinho"
 
+    echo "Usuario ID: " . $usuarioId . "<br>";
+    echo "Produto ID: " . $produtoId . "<br>";
+    echo "Preço Produto: " . $precoProduto . "<br>";
+
     // Exemplo de inserção do produto no carrinho
     $sql = "INSERT INTO carrinho (usuario_id_usuario, produto_id_produto, preco_total_venda, data_venda, finalizada_venda)
             VALUES ($usuarioId, $produtoId, $precoProduto, NOW(), 0)"; // Supondo que o ID do usuário logado seja 1
+
+    echo "SQL: " . $sql . "<br>";
 
     if (mysqli_query($connection, $sql)) {
         // Operação concluída com sucesso
@@ -41,3 +47,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Fechando a conexão com o banco de dados
 mysqli_close($connection);
 ?>
+
