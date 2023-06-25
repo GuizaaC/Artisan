@@ -24,8 +24,7 @@
   /* Body */
   body {
     margin: 0px;
-    background-image: url(/assets/costureiro.jpg);
-    background-attachment: fixed;
+    background-image: url(/assets/ferramentas.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
