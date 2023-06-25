@@ -26,7 +26,7 @@
 
             <!-- Campo preco_produto -->
             <label class="titulo" for="preco_produto">Preço</label> <br>
-            <input class="entrada" type="number" name="preco_produto" id="preco_produto" placeholder="Preço" required>  <br>
+            <input class="entrada" type="number" name="preco_produto" id="preco_produto" placeholder="Preço" min="0" required>  <br>
 
             <!-- Campo descricao_produto -->
             <label class="titulo" for="descricao_produto">Descrição</label> <br>
