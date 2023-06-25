@@ -31,7 +31,7 @@ if (!$connection) {
 }
 
 // Seleção de campos
-$query = "SELECT id_usuario, nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, email_usuario, senha_usuario
+$query = "SELECT id_usuario, nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, email_usuario, senha_usuario, tipo_usuario
 FROM usuario
 WHERE email_usuario = '" . $_POST["Email_Cliente"] . "' AND senha_usuario = '" . md5($_POST["Senha_Cliente"]) . "'";
 $resp = mysqli_query($connection, $query) or die('Erro ao consultar..');
@@ -39,6 +39,7 @@ $resp = mysqli_query($connection, $query) or die('Erro ao consultar..');
 $_SESSION["logado"] = "nao";
 while ($rowp = mysqli_fetch_array($resp)) {
     $_SESSION["Id_Cliente"] = $rowp["id_usuario"];
+    $_SESSION["tipo_usuario"] = $rowp["tipo_usuario"];
     $logado = "sim";
 ?>
 
@@ -49,7 +50,7 @@ while ($rowp = mysqli_fetch_array($resp)) {
 if ($logado != "sim") {
     ?>
     <script>
-        alert('emailou senha inválidos.');
+        alert('email ou senha inválidos.');
         window.location = '../login/login.html';
     </script>
     <?php
@@ -74,3 +75,4 @@ if ($logado != "sim") {
 
 </body>
 </html>
+
