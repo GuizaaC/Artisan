@@ -24,8 +24,7 @@
             O Artisan é uma empresa que nasceu da ideia de dar espaço para os artesões venderem <br> 
             seus produtos em uma plataforma acessível e confiável. <br>
             Atualmente contamos com diversos colaboradores que tornaram esse projeto tão grande quanto é hoje! <br>
-            Com seus 10 anos de história, esperamos manter a qualidade no serviço que tanto prezamos, então venha <br>
-            e torne-se um dos nossos colaboradores! <br>
+            Com seus 10 anos de história, esperamos manter a qualidade no serviço que tanto prezamos, então venha e torne-se um dos nossos colaboradores! <br>
             <a href="/cadastro/cadastro.php">Cadastre-se</a>
             <a href="/home/produtos.php">Produtos</a>
 
