@@ -19,6 +19,7 @@
             <a href="/login/login.html" id="entrar">
             <button onClick = "window.location ='./login/login.html';" class="login">Entrar</button>
         </a>
+    </header>
         <div class="container">
             O Artisan é uma empresa que nasceu da ideia de dar espaço para os artesões venderem <br> 
             seus produtos em uma plataforma acessível e confiável. <br>
@@ -29,5 +30,4 @@
             <a href="/home/produtos.php">Produtos</a>
 
         </div>
-    </header>
     </body>
