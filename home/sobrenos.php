@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet"  media="(min-width: 601px)" href="sobrenos.css">
+        <link rel="stylesheet" media="(max-width: 600px)" href="sobrenosmedia.css" />
     </head>
     <body>
         <header class="topo">
