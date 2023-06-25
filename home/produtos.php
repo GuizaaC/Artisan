@@ -55,11 +55,11 @@
                         <img src="/assets/produto.png" alt="Imagem Padrão do Produto">
                     <?php } ?>
                 </div>
-                <div class="product-details">
-                    <h2 class="product-name"><?php echo $rowp["nome_produto"]; ?></h2>
-                    <p class="product-price">$<?php echo $rowp["preco_produto"]; ?></p>
-                    <p class="product-description"><?php echo $rowp["descricao_produto"]; ?></p>
-                    <p class="product-quantity">Quantidade: <?php echo $rowp["quantidade_produto"]; ?></p>
+                <div class="detalhes_produto">
+                    <h2 class="nome_produto" style="color: black; font-size: 18px;"><?php echo $rowp["nome_produto"]; ?></h2>
+                    <p class="preco_produto">$<?php echo $rowp["preco_produto"]; ?></p>
+                    <p class="descricao_produto"><?php echo $rowp["descricao_produto"]; ?></p>
+                    <p class="quantidade_produto">Quantidade: <?php echo $rowp["quantidade_produto"]; ?></p>
                 </div>
             </div>
         </li>
