@@ -20,41 +20,28 @@ if (!$connection) {
 }
 
 // Verifica se um arquivo de imagem foi enviado
-if (isset($_FILES['img_usuario']) && $_FILES['img_usuario']['error'] === UPLOAD_ERR_OK) {
+if (isset($_FILES['img_produto']) && $_FILES['img_produto']['error'] === UPLOAD_ERR_OK) {
     $targetDir = 'assets';  // Substitua pelo caminho real do diretório
-    $targetFile = $targetDir . basename($_FILES['img_usuario']['name']);
+    $targetFile = $targetDir . basename($_FILES['img_produto']['name']);
     $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
     // Verifica se o arquivo é uma imagem válida
     $allowedExtensions = array('jpg', 'jpeg', 'png');
     if (in_array($imageFileType, $allowedExtensions)) {
         // Move o arquivo para o diretório de destino
-        if (move_uploaded_file($_FILES['img_usuario']['tmp_name'], $targetFile)) {
+        if (move_uploaded_file($_FILES['img_produto']['tmp_name'], $targetFile)) {
             // Caminho da imagem para salvar no banco de dados
-            $imgUsuario = $targetFile;
-
-            // Aplicar criptografia MD5 à senha
-            $senhaCriptografada = md5($_POST["senha_usuario"]);
+            $imgProduto = $targetFile;
 
             // Comandos de transferência (PHP - SQL)
-            $query = "INSERT INTO usuario (email_usuario, nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, senha_usuario, img_usuario)
-                      VALUES ('".$_POST["email_usuario"]."', '".$_POST["nome_usuario"]."', '".$_POST["endereco_usuario"]."', '".$_POST["telefone_usuario"]."', 
-                      '".$_POST["cpf_usuario"]."', '".$_POST["data_nascimento_usuario"]."', '".$senhaCriptografada."', '".$imgUsuario."');";
+            $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, img_produto)
+                      VALUES ('".$_POST["nome_produto"]."', '".$_POST["preco_produto"]."', '".$_POST["descricao_produto"]."', '".$imgProduto."');";
 
             // Confirmação do salvamento
             mysqli_query($connection, $query) or die ('Erro ao salvar: ' . mysqli_error($connection));
             echo "Salvo com sucesso";
 
-            $query = "SELECT id_usuario, nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, email_usuario, senha_usuario 
-                      FROM usuario 
-                      WHERE email_usuario = '".$_POST["email_usuario"]."' AND senha_usuario = '".$senhaCriptografada."';";
-
-            $resp = mysqli_query($connection, $query) or die ('Erro ao consultar: ' . mysqli_error($connection));
-            $_SESSION["logado"] = "nao";
-            while ($rowp = mysqli_fetch_array($resp)) {
-                $_SESSION["id_usuario"] = $rowp["id_usuario"];
-            }
-
+            // Redirecionar para a página de destino
             echo '<script>window.location = "../home/home.php";</script>';
 
         } else {
@@ -68,5 +55,6 @@ if (isset($_FILES['img_usuario']) && $_FILES['img_usuario']['error'] === UPLOAD_
 }
 
 mysqli_close($connection);
+
 ?>
 
