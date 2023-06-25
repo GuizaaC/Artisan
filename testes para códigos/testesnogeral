@@ -202,3 +202,20 @@ while ($rowp = mysqli_fetch_array($resp)) {
  <script src="/listar.js"></script>
 </body>
 </html>
+
+if ($logado != "sim") {
+    ?>
+    <script>
+        alert('Usuário ou senha inválidos.');
+        window.location = '../login/login.html';
+    </script>
+    <?php
+} else {
+    $_SESSION["logado"] = "sim";
+    ?>
+    <script>
+        alert('Usuário logado com sucesso.');
+        window.location = '../listar_usuarios/listarUsuarios.php';
+    </script>
+    <?php
+}

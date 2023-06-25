@@ -48,7 +48,7 @@
             <li class="lista ">
 
                 <a href='../atualizar_perfil/atualizarperfil.php?id_usuario=<?php echo $rowp["id_usuario"];  ?>'><label>Editar<label/></a>
-                <a href='../delete_cliente/delete.php?id_usuario=<?php echo $rowp["id_usuario"];  ?>'><label>Deletar<label/></a> </li><br> <br>
+                <a href='../delete_cliente/delete.php?id_usuario=<?php echo $rowp["id_usuario"];  ?>'><label>Deletar<label></a> </li><br> <br>
 
             <main>
                 <div class="list">

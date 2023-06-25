@@ -49,8 +49,15 @@ while ($rowp = mysqli_fetch_array($resp)) {
 if ($logado != "sim") {
     ?>
     <script>
-        alert('Usuário ou senha inválidos.');
+        alert('emailou senha inválidos.');
         window.location = '../login/login.html';
+    </script>
+    <?php
+} elseif ($_SESSION['tipo_usuario'] != 3) {
+    ?>
+    <script>
+        alert('Acesso não autorizado.');
+        window.location = '../home/home.php';
     </script>
     <?php
 } else {
@@ -62,6 +69,7 @@ if ($logado != "sim") {
     </script>
     <?php
 }
+
 ?>
 
 </body>
