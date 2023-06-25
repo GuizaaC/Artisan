@@ -72,11 +72,11 @@
                                     <p class="descricao_produto"><?php echo $rowp["descricao_produto"]; ?></p>
                                 </div>
                                 <div class="adicionar_carrinho">
-                                    <form action="adicionarcarrinho.php" method="post">
-                                        <input type="hidden" name="id_usuario" value="<?php echo $rowp['id_usuario']; ?>"> <!-- Supondo que o ID do usuário logado seja 1 -->
+                                    <form action="finalizarcompra.php" method="post">
+                                        <input type="hidden" name="id_usuario" value="<?php echo $rowp['id_usuario']; ?>"> 
                                         <input type="hidden" name="id_produto" value="<?php echo $rowp['id_produto']; ?>">
                                         <input type="hidden" name="preco_produto" value="<?php echo $rowp['preco_produto']; ?>">
-                                        <button type="submit">Adicionar ao Carrinho</button>
+                                        <button type="submit">Comprar</button>
                                     </form>
                                 </div>
                             </div>
