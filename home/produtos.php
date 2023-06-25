@@ -1,64 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="(min-width: 601px)" href="indexDesktop.css">
-    <link rel="stylesheet" media="(max-width: 600px)" href="indexMobile.css" />
-    <title>Inicio</title>
-
+    <link rel="stylesheet" href="produtos.css">
+    <title>Listagem de Produtos</title>
 </head>
 
 <body>
-     <div id="primeira_tela">
-        <header class="topo">
+<!-- cabeçalho -->
+<header class="topo">
+    <a href="../home/home.php">
+        <img src="../assets/Logo.png" alt="Logo" class="logo">
+    </a>
+</header>
 
-            <p>Serviço</p>
-            <a href="/home/produtos.php">Produtos</a>
-            <img src="./assets/Logo.png" alt="Logo" class="logo">
-            <p>Equipe</p>
-            <p>Contato</p>
+<br> <br><br>
+<div class="container">
 
-            <a href="/login/login.html" id="entrar">
-                <button onClick = "window.location ='./login/login.html';" class="login">Login</button>
-            </a>
-        </header>
+    <!-- informações do banco de dados -->
+    <?php
+    $servername = "localhost";
+    $database = "u553234134_Artisan";
+    $username = "u553234134_Gizaac";
+    $password = "Gizaac12343124";
 
-        <h1>
-            Confira os nossos produtos!
-        </h1>
-    </div>
+    // criando a conexão
+    $connection = mysqli_connect($servername, $username, $password, $database);
 
-    <div id="primeiro_bg">
-        
-    </div>
+    // checando a conexão
+    if (!$connection) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
-    <div class="tarja">
-        <h1 class="name"><?php echo $rowp["nome_produto"]  ?></h1>
-        <h3 class="id"><?php echo $rowp["id_produto"]; ?></h3>
-        <h3 class="preco"><?php echo $rowp["preco_produto"]; ?></h3>
-        <h3 class="descricao"><?php echo $rowp["descricao_produto"]; ?></h3>
-        <h3 class="quantidade"><?php echo $rowp["quantidade_produto"]; ?></h3>
-        <a href="/carrinho/carrinho.php">Adicionar ao carrinho</a>
-    </div>
+    // selecionando os campos do banco
+    $query = 'SELECT nome_produto, preco_produto, descricao_produto, quantidade_produto, img_produto FROM produto';
+    $resp = mysqli_query($connection, $query) or die('Erro ao consultar..');
 
-    <div class="gap">
-    
-    </div>
+    while ($rowp = mysqli_fetch_array($resp)) {
+    ?>
 
-    <div class="tarja">
-        
-    </div>
+    <!-- lista desordenada dos produtos -->
+    <ul>
+        <li class="lista">
+            <div class="product">
+                <div class="product-image">
+                    <?php if (!empty($rowp['img_produto'])) { ?>
+                        <img src="<?php echo $rowp['img_produto']; ?>" alt="Imagem do Produto">
+                    <?php } else { ?>
+                        <img src="/assets/produto.png" alt="Imagem Padrão do Produto">
+                    <?php } ?>
+                </div>
+                <div class="product-details">
+                    <h2 class="product-name"><?php echo $rowp["nome_produto"]; ?></h2>
+                    <p class="product-price">$<?php echo $rowp["preco_produto"]; ?></p>
+                    <p class="product-description"><?php echo $rowp["descricao_produto"]; ?></p>
+                    <p class="product-quantity">Quantidade: <?php echo $rowp["quantidade_produto"]; ?></p>
+                </div>
+            </div>
+        </li>
+    </ul>
 
-    <footer>
-    </footer>
+    <?php
+    };
+    ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</div>
+
 </body>
-
 </html>
+
 
 
 
