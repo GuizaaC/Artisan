@@ -86,34 +86,19 @@
 
 </div>
 <script>
-    // Função para adicionar ao carrinho
-    function adicionarAoCarrinho(id, preco) {
-      // Verificar se o carrinho já existe no armazenamento local (localStorage)
-      let carrinho = localStorage.getItem('carrinho');
-      if (!carrinho) {
-        // Se o carrinho não existir, criar um array vazio
-        carrinho = [];
-      } else {
-        // Se o carrinho existir, converter o JSON em um array
-        carrinho = JSON.parse(carrinho);
-      }
+var carrinhoDeCompras = [];
 
-      // Criar um objeto com as informações do produto
-      const produto = {
-        id: id,
-        preco: preco
-      };
+function adicionarAoCarrinho(idProduto, precoProduto) {
+  var produto = {
+    id: idProduto,
+    preco: precoProduto
+  };
 
-      // Adicionar o produto ao carrinho
-      carrinho.push(produto);
+  carrinhoDeCompras.push(produto);
 
-      // Armazenar o carrinho atualizado no localStorage
-      localStorage.setItem('carrinho', JSON.stringify(carrinho));
-
-      // Exibir uma mensagem ou redirecionar para a página do carrinho, se necessário
-      alert('Produto adicionado ao carrinho!');
-    }
-  </script>
+  console.log("Produto adicionado ao carrinho:", produto);
+}
+</script>
 </body>
 </html>
 
