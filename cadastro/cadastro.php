@@ -13,7 +13,7 @@
 <body>
 
     <header class="topo">
-        <a href="..http://artisan.gzaac.com.br">
+        <a href="../index.html">
             <img src="../assets/Logo.png" alt="Logo" class="logo">
         </a>
     </header>
