@@ -48,7 +48,7 @@ mysqli_close($connection);
 $_SESSION['compra_finalizada'] = true;
 
 // Redireciona o usuário de volta para a página inicial
-header('Location: /carrinho/carrinho.php');
+header('Location: /home/home.php');
 exit;
 ?>
 

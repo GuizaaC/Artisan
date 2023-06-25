@@ -13,7 +13,7 @@
 <body>
 <!-- cabeçalho -->
 <header class="topo">
-    <a href="../index.html">
+    <a href="home/home.html">
         <img src="../assets/Logo.png" alt="Logo" class="logo">
     </a>
 </header>
