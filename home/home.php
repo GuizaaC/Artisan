@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Verifica se o usuário está logado e possui tipo_usuario igual a 3
+if (isset($_SESSION["logado"]) && $_SESSION["logado"] == "sim" && $_SESSION["tipo_usuario"] == 3) {
+    // Usuário autenticado e autorizado, exibe o link
+    echo '<a href="/listar_usuarios/listarUsuarios.php">lista de usuarios</a>';
+}
+?>
 <!DOCTYPE html>
 <html lang="pt">
 
