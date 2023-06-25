@@ -23,9 +23,6 @@
   
   /* Body */
   body {
-    background-color: #182747;
-    background-position: center;
-    background-repeat: no-repeat;
     margin: 0px;
     background-image: url(/assets/costureiro.jpg);
     background-attachment: fixed;
