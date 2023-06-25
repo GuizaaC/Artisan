@@ -14,9 +14,7 @@
             <p>Produtos</p>
             <img src="./assets/Logo.png" alt="Logo" class="logo">
             <a href="/login/login.html" id="entrar">Login</a>
-            <button onClick = "window.location ='./login/login.html';" class="login">Entrar</button>
-        </a>
-    </header>
+        </header>
         <div class="container">
             O Artisan é uma empresa que nasceu da ideia de dar espaço para os artesões venderem <br> 
             seus produtos em uma plataforma acessível e confiável. <br>
