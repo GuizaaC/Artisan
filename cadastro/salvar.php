@@ -17,7 +17,7 @@ if (!$connection) {
 
 // Verifica se um arquivo de imagem foi enviado
 if (isset($_FILES['img_usuario']) && $_FILES['img_usuario']['error'] === UPLOAD_ERR_OK) {
-    $targetDir = 'assets';  // Substitua pelo caminho real do diretório
+    $targetDir = 'assets';  
     $targetFile = $targetDir . basename($_FILES['img_usuario']['name']);
     $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 

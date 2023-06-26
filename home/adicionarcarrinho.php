@@ -19,9 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $produtoId = $_POST['id_produto'];
     $precoProduto = $_POST['preco_produto'];
 
-    // Aqui você pode realizar as operações necessárias para adicionar o produto ao carrinho no banco de dados
-    // Por exemplo, pode ser necessário obter o ID do usuário logado para vincular o produto ao carrinho dele
-    // Você também precisará calcular o preço total do carrinho e atualizá-lo na tabela "carrinho"
+ 
 
     echo "Usuario ID: " . $usuarioId . "<br>";
     echo "Produto ID: " . $produtoId . "<br>";
