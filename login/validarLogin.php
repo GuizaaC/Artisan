@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +14,8 @@
 
 <body>
 
-<header class="topo"><img src="../assets/Logo.png" alt="Logo" class="logo">
+<header class="topo">
+    <img src="../assets/Logo.png" alt="Logo" class="logo">
     <a href="../index.html">
         <button class="voltar">Voltar</button>
     </a>
@@ -41,23 +45,26 @@ while ($rowp = mysqli_fetch_array($resp)) {
     $_SESSION["Id_Cliente"] = $rowp["id_usuario"];
     $_SESSION["tipo_usuario"] = $rowp["tipo_usuario"];
     $logado = "sim";
-?>
-
-    Logado com sucesso:<?php echo $rowp["nome_usuario"]; ?>
-
-<?php
 }
+
 if ($logado != "sim") {
     ?>
     <script>
-        alert('email ou senha inválidos.');
+        alert('Email ou senha inválidos.');
         window.location = '../login/login.html';
+    </script>
+    <?php
+} elseif ($_SESSION['tipo_usuario'] == 2) {
+    ?>
+    <script>
+        alert('Usuário logado como vendedor.');
+        window.location = '../homevendedor/homevendedor.php';
     </script>
     <?php
 } elseif ($_SESSION['tipo_usuario'] != 3) {
     ?>
     <script>
-        alert('Acesso não autorizado.');
+        alert('Usuário logado como usuário.');
         window.location = '../home/home.php';
     </script>
     <?php
@@ -65,14 +72,16 @@ if ($logado != "sim") {
     $_SESSION["logado"] = "sim";
     ?>
     <script>
-        alert('Usuário logado com sucesso.');
+        alert('Usuário logado como admin.');
         window.location = '../listar_usuarios/listarUsuarios.php';
     </script>
     <?php
 }
 
+mysqli_close($connection);
 ?>
 
 </body>
 </html>
+
 
