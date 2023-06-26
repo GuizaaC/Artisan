@@ -58,7 +58,7 @@ if ($logado != "sim") {
     ?>
     <script>
         alert('Usuário logado como vendedor.');
-        window.location = '../homevendedor/homevendedor.php';
+        window.location = '../home/homevendedor.php';
     </script>
     <?php
 } elseif ($_SESSION['tipo_usuario'] != 3) {
