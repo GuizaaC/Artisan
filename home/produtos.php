@@ -51,7 +51,7 @@
                                 <div class="user">
                                     <div class="profile">
                                         <?php if (!empty($rowp['img_produto'])) { ?>
-                                            <img src="<?php echo $rowp['img_usuario']; ?>" alt="Imagem do produto">
+                                            <img src="<?php echo $rowp['img_produto']; ?>" alt="Imagem do produto">
                                         <?php } else { ?>
                                             <img src="/assets/produto.png" alt="Imagem Padrão">
                                         <?php } ?>
@@ -72,6 +72,7 @@
                                 </div>
                                 <div class="adicionar_carrinho">
                                     <form action="finalizarcompra.php" method="post">
+                                        <input type="hidden" name="produto_id" value="<?php echo $rowp['id_produto']; ?>">
                                         <button type="submit">Comprar</button>
                                     </form>
                                 </div>
@@ -90,6 +91,7 @@
 </body>
 
 </html>
+
 
 
 
