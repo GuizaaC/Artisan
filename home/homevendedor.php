@@ -20,7 +20,7 @@
             <a href="/home/produtos.php">Produtos</a>
             <img src="./assets/Logo.png" alt="Logo" class="logo">
             <a href="/home/sobrenos.php">Sobre Nós</a>
-            <p>Contato</p>
+            <a href="/listaprodutos/listaprodutos.php">Lista produtos</a>
 
             <a href="/login/login.html" id="entrar">
                 <button onClick = "window.location ='./login/login.html';" class="login">Login</button>

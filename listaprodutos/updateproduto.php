@@ -15,9 +15,8 @@ if (!$connection) {
     die("Connection failed: " . mysqli_connect_error());
 }
 //Atualização dos dados do banco
-$query = " UPDATE usuario SET nome_usuario = '".$_GET["nome_usuario"]."', endereco_usuario = '".$_GET["endereco_usuario"]."', telefone_usuario = '".$_GET["telefone_usuario"]."', 
-cpf_usuario = '".$_GET["cpf_usuario"]."', data_nascimento_usuario = '".$_GET["data_nascimento_usuario"]."', email_usuario = '".$_GET["email_usuario"]."',
- senha_usuario = '".$_GET["senha_usuario"]."' WHERE id_usuario = '".$_GET["id_usuario"]."' ";
+$query = " UPDATE produto SET nome_produto = '".$_GET["nome_produto"]."', preco_produto = '".$_GET["preco_produto"]."', descricao_produto = '".$_GET["descricao_produto"]."', 
+quantidade_produto = '".$_GET["quantidade_produto"]."', img_produto = '".$_GET["img_produto"]."' WHERE id_produto = '".$_GET["id_produto"]."' ";
 mysqli_query($connection,$query) or die ('Erro ao salvar..');
 echo "Salvo com sucesso";
 
@@ -25,5 +24,5 @@ echo "Salvo com sucesso";
 ?>
 
 <script>
-    window.location='../listar_usuarios/listarUsuarios.php';
+    window.location='../listaprodutos/listaprodutos.php';
 </script>
