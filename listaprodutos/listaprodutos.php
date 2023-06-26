@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="produtos.css">
+    <link rel="stylesheet" href="listaproduto.css">
     <title>Listagem de Produtos</title>
 </head>
 
@@ -46,7 +46,7 @@
             <ul>
                 <li class="lista ">
                 <a href='../listaprodutos/atualizarproduto.php?id_usuario=<?php echo $rowp["id_produto"];  ?>'><label>Editar<label/></a>
-                <a href='../listaprodutos/deleteproduto.php?id_usuario=<?php echo $rowp["id_usuario"];  ?>'><label>Deletar<label></a> </li><br> <br>
+                <a href='../listaprodutos/deleteproduto.php?id_usuario=<?php echo $rowp["id_produto"];  ?>'><label>Deletar<label></a> </li><br> <br>
                     <main>
                         <div class="list">
                             <div class="line">

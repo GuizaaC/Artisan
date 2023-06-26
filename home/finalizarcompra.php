@@ -38,7 +38,7 @@ if (isset($_POST['id_produto'])) {
         // Os dados foram salvos com sucesso
 
         // Atualizar o estoque do produto
-        $updateQuery = "UPDATE produto SET quantidade_produto = quantidade_produto - 1 WHERE id_produto = $produtoId";
+        $Query = "UPDATE produto SET quantidade_produto = quantidade_produto - 1 WHERE id_produto = $produtoId";
 
         // Tentativa de atualizar o estoque
         if (mysqli_query($connection, $updateQuery)) {
