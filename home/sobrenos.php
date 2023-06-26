@@ -11,7 +11,7 @@
     </head>
     <body>
         <header class="topo">
-            <p>Produtos</p>
+            <a href="/home/produtos.php">Produtos</a>
             <img src="./assets/Logo.png" alt="Logo" class="logo">
             <a href="/login/login.html" id="entrar">Login</a>
         </header>

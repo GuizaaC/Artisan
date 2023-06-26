@@ -25,7 +25,7 @@ if (!$connection) {
 }
 
 // Comandos de transferência (PHP - SQL)
-$query = "INSERT INTO carrinho (id_usuario, id_produto, nome_produto, preco_produto) VALUES ('".$_SESSION["id_usuario"]."', '".$id_produto."', '".$nome_produto."', '".$preco_produto."');";
+$query = "INSERT INTO carrinho (data_venda, finalizada_venda) VALUES (now(), "1");";
 
 // Tentativa de salvar os dados no banco
 if (mysqli_query($connection, $query)) {
@@ -47,7 +47,5 @@ header('Location: /home/home.php');
 exit;
 ?>
 
-<script>
-    alert("Obrigado por comprar conosco!")
-</script>
+
 
