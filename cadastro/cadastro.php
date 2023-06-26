@@ -47,7 +47,7 @@
 
             <!-- Validação -->
             <input class="enviar" type="button" id="btn" value="Enviar" onclick="fnValidar();">
-            <label class="cadastrar"> Cadastre-se como vendedor! <a id="fazerCadastro" href="../cadastrovendedor/cadastrovendedor.php"> Fazer cadastro</a></label>
+            <label class="cadastrar" style="color: white;"> Cadastre-se como vendedor! <a id="fazerCadastro" href="../cadastrovendedor/cadastrovendedor.php">Cadastro</a></label>
         </form> 
         <script src="/cadastro/cadastro.js"></script>
     </div>
