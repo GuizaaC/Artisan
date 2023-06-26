@@ -34,7 +34,7 @@ if (isset($_FILES['img_produto']) && $_FILES['img_produto']['error'] === UPLOAD_
             $imgProduto = $targetFile;
 
             // Comandos de transferência (PHP - SQL)
-            $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, quantidade_produto img_produto)
+            $query = "INSERT INTO produto (nome_produto, preco_produto, descricao_produto, quantidade_produto, img_produto)
                       VALUES ('".$_POST["nome_produto"]."', '".$_POST["preco_produto"]."', '".$_POST["descricao_produto"]."', '".$_POST["quantidade_produto"]."', '".$imgProduto."');";
 
             // Confirmação do salvamento
