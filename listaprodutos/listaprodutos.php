@@ -45,8 +45,8 @@
             <!-- lista desordenada dos produtos -->
             <ul>
                 <li class="lista ">
-                <a href='../listaprodutos/atualizarproduto.php?id_usuario=<?php echo $rowp["id_produto"];  ?>'><label>Editar<label/></a>
-                <a href='../listaprodutos/deleteproduto.php?id_usuario=<?php echo $rowp["id_produto"];  ?>'><label>Deletar<label></a> </li><br> <br>
+                <a href='../listaprodutos/atualizarproduto.php<?php echo $rowp["id_produto"];  ?>'><label>Editar<label/></a>
+                <a href='../listaprodutos/deleteproduto.php<?php echo $rowp["id_produto"];  ?>'><label>Deletar<label></a> </li><br> <br>
                     <main>
                         <div class="list">
                             <div class="line">
