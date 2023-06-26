@@ -35,7 +35,7 @@ if (isset($_FILES['img_usuario']) && $_FILES['img_usuario']['error'] === UPLOAD_
             // Comandos de transferência (PHP - SQL)
             $query = "INSERT INTO usuario (email_usuario, nome_usuario, endereco_usuario, telefone_usuario, cpf_usuario, data_nascimento_usuario, senha_usuario, img_usuario, tipo_usuario)
                       VALUES ('".$_POST["email_usuario"]."', '".$_POST["nome_usuario"]."', '".$_POST["endereco_usuario"]."', '".$_POST["telefone_usuario"]."', 
-                      '".$_POST["cpf_usuario"]."', '".$_POST["data_nascimento_usuario"]."', '".$senhaCriptografada."', '".$imgUsuario."','1');";
+                      '".$_POST["cpf_usuario"]."', '".$_POST["data_nascimento_usuario"]."', '".$senhaCriptografada."', '".$imgUsuario."','2');";
 
             // Confirmação do salvamento
             mysqli_query($connection, $query) or die ('Erro ao salvar: ' . mysqli_error($connection));
