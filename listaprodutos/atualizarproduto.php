@@ -54,28 +54,26 @@ if ( $_SESSION["logado"] != "sim"){
 <br> <br><br>
     <div class="container">
 <form id="formSalvarAtualizar" action='updateproduto.php' method="GET" onsubmit>
-        <!-- Campo nome -->
-    <label class="titulo">Nome</label> <br>  
-        <input class="entrada" name='Nome_Cliente' id="Nome_Cliente_Atualizado" placeholder="Nome" value="<?php echo $rowp["Nome_Cliente"]; ?>" required> <br>
-        <!-- Campo Endereço -->
-    <label class="titulo">Endereço</label> <br>
-        <input class="entrada" name='Endereco_Cliente' id="Endereco_Cliente_Atualizado" placeholder="Endereço" value="<?php echo $rowp["Endereco_Cliente"]; ?>" required>  <br>
-        <!-- Campo Telefone -->
-    <label class="titulo">Telefone</label> <br>
-        <input class="entrada" type="tel" max="11"name='Telefone_Cliente' id="Telefone_Cliente_Atualizado" placeholder="(00)90000-0000" value="<?php echo $rowp["Telefone_Cliente"]; ?>" required> <br>
-        <!-- Campo CPF -->
-    <label class="titulo">CPF</label> <br>
-        <input class="entrada" min="11" max="11"name='Cpf_Cliente' id="CPF_Cliente_Atualizado" placeholder="000.000.000-00" value="<?php echo $rowp["CPF_Cliente"]; ?>" required > <br>
-        <!-- Campo Data de nascimento -->
-    <label class="titulo">Data de Nascimento</label> <br>
-        <input class="entrada" min="1900-01-01" max="2050-12-31" type="date" name='Data_Nascimento_Cliente' id="Data_Cliente_Atualizado" placeholder="DD/MM/AAAA" value="<?php echo $rowp["Data_Nascimento_Cliente"]; ?>" required> <br>
-        <!-- Campo Email -->
-    <label class="titulo">Email</label> <br>
-        <input class="entrada" type="email" max="70" name='Email_Cliente' id="Email_Cliente_Atualizado" placeholder="Email" value="<?php echo $rowp["Email_Cliente"]; ?>"  required > <br>
-        <!-- Campo senha -->
-    <label class="titulo">Senha</label>
-        <input class="entrada" type="password" min="5" max="10" name="Senha_Cliente" id="Senha_cliente_Atualizado" placeholder="Senha" value="<?php echo $rowp["Senha_Cliente"]; ?>" required><br>
-    <input class="entrada" type="hidden" name="Id_Cliente" id="Id_Cliente" value="<?php echo $_GET["Id_Cliente"]; ?>"><br>
+    <!-- Campo nome_produto -->
+<label class="titulo">Nome do produto</label> <br>  
+<input class="entrada" name='nome_produto' id="nome_produto_atualizado" placeholder="Nome do produto" value="<?php echo $rowp["nome_produto"]; ?>" required> <br>
+
+<!-- Campo preco_produto -->
+<label class="titulo">Preço</label> <br>
+<input class="entrada" name='preco_produto' id="preco_produto_atualizado" placeholder="Preço" value="<?php echo $rowp["preco_produto"]; ?>" required>  <br>
+
+<!-- Campo descricao_produto -->
+<label class="titulo">Descrição</label> <br>
+<input class="entrada" name='descricao_produto' id="descricao_produto_atualizado" placeholder="Coloque a descrição do produto" value="<?php echo $rowp["descricao_produto"]; ?>" required> <br>
+
+<!-- Campo quantidade_produto -->
+<label class="titulo">Quantidade</label> <br>
+<input class="entrada" name='quantidade_produto' id="quantidade_produto_atualizado" placeholder="Quantidade" value="<?php echo $rowp["quantidade_produto"]; ?>" required> <br>
+
+<!-- Campo img_produto -->
+<label class="titulo">Foto do produto</label>
+<input class="imagem" type="file" name="img_produto" id="img_produto" accept="image/*" required><br>
+
     <?php      
     };
     ?>
