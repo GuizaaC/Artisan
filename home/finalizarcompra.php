@@ -57,14 +57,16 @@ if (isset($_POST['id_produto'])) {
     $_SESSION['compra_finalizada'] = true;
 
     // Redireciona o usuário de volta para a página inicial
-    echo "Usuário logado e compra finalizada.";
     header('Location: /home/home.php');
     exit;
 } else {
     // ID do produto não foi passado
     echo "ID do produto não foi fornecido.";
+    header('Location: /home/home.php'); // Redireciona para a página inicial mesmo se houver um erro
+    exit;
 }
 ?>
+
 
 
 
