@@ -72,7 +72,7 @@
                                 </div>
                                 <div class="adicionar_carrinho">
                                     <form action="finalizarcompra.php" method="post">
-                                        <input type="hidden" name="produto_id" value="<?php echo $rowp['id_produto']; ?>">
+                                        <input type="hidden" name="id_produto" value="<?php echo $rowp['id_produto']; ?>">
                                         <button type="submit">Comprar</button>
                                     </form>
                                 </div>
