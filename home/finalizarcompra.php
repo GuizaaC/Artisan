@@ -32,7 +32,7 @@ if (mysqli_query($connection, $query)) {
     // Os dados foram salvos com sucesso
 
     // Obter o ID do produto vendido (supondo que você tenha essa informação disponível)
-    $produtoId = $_POST['produto_id'];
+    $produtoId = $_POST['id_produto'];
 
     // Atualizar o estoque do produto
     $updateQuery = "UPDATE produto SET quantidade_produto = quantidade_produto - 1 WHERE id_produto = $produtoId";
