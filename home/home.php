@@ -16,7 +16,7 @@
      <div id="primeira_tela">
         <header class="topo">
 
-            <a href="/produto/cadastroproduto.php">Cadastrar Produto</a>
+            <p>Cadastrar Produto<p>
             <a href="/home/produtos.php">Produtos</a>
             <img src="./assets/Logo.png" alt="Logo" class="logo">
             <a href="/home/sobrenos.php">Sobre Nós</a>
