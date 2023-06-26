@@ -36,8 +36,8 @@
         }
 
         // selecionando os campos do banco
-        $query = 'SELECT  nome_produto, preco_produto, descricao_produto, quantidade_produto, img_produto FROM produto';
-        $resp = mysqli_query($connection, $query) or die('Erro ao consultar..');
+        $query = ' select id_usuario, nome_usuario, img_usuario from usuario ';
+        $resp= mysqli_query($connection,$query) or die ('Erro ao consultar..');
 
         while ($rowp = mysqli_fetch_array($resp)) {
         ?>
