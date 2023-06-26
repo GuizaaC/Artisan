@@ -25,7 +25,7 @@ if (!$connection) {
 }
 
 // Comandos de transferência (PHP - SQL)
-$query = "INSERT INTO carrinho (data_venda, finalizada_venda) VALUES (NOW(), 1);";
+$query = "INSERT INTO venda (data_venda, finalizada_venda) VALUES (NOW(), 1);";
 
 // Tentativa de salvar os dados no banco
 if (mysqli_query($connection, $query)) {
