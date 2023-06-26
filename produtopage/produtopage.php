@@ -70,6 +70,9 @@
                                 <div class="descricao_produto">
                                     <p class="descricao_produto"><?php echo $rowp["descricao_produto"]; ?></p>
                                 </div>
+                                <div>
+                                    <p>Necessário login para compra</p>
+                                </div>
                             </div>
                         </div>
                     </main>
