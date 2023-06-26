@@ -42,6 +42,7 @@ mysqli_close($connection);
 $_SESSION['compra_finalizada'] = true;
 
 // Redireciona o usuário de volta para a página inicial
+echo "usuario logado e compra finalizada."
 header('Location: /home/home.php');
 exit;
 ?>
